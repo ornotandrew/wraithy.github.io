@@ -1,0 +1,40 @@
+# Site settings
+title: Andrew van Rooyen
+description: 'Software Developer — Cape Town — South Africa'
+url: 'http://wraithy.github.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Andrew van Rooyen'
+  email: wraith.andrew@gmail.com
+  twitter_username: _wraithy
+  facebook_username: wraith.andrew
+  github_username:  wraithy
+  linkedin_username:  andrewvanrooyen1
+  steam_username: wraithy
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate', 'jemoji']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
