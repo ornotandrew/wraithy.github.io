@@ -24,8 +24,8 @@ what I post - great. If they don't - at least I will.
 I don't have a particular plan for what I'll be writing, but it will likely
 involve
 
-+ **Programming environments** - Mostly Vim, but also general workflows
-  inside a terminal
++ **Programming environments** - Mostly Vim, but also general workflows inside a
+  terminal
 + **Tooling around programming for the cloud** - Specifically CI/CD, Docker and
   Google Cloud Platform
 
