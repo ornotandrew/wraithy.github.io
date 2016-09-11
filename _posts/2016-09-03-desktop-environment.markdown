@@ -2,50 +2,61 @@
 title:  "Desktop environments"
 ---
 
-If you spend 8+ hours a day working in a particular space, it's pretty important
-that it's comfortable and allows you to be productive. If you spend a lot of
-time driving with your seat too close to the wheel, your back will start
-hurting. If your office is filled with with crappy stationary, you'll end up
-frustrated with pens containing gravity-defying ink and staplers which are only
-good for making holes in paper.
+If you spend 8+ hours a day working in a particular space, it's pretty important that it's comfortable and allows you to be productive. If you spend a lot of time driving with your seat too close to the wheel, your back will start hurting. If your office is filled with with crappy stationary, you'll end up frustrated with pens containing gravity-defying ink and staplers which are only good for making holes in paper.
 
-This sounds pretty dumb, right? Just move the seat back. Buy better stationary.
-These examples are trivial and can be fixed with almost no effort. The thing is,
-computer interfaces are <s>arguably</s> just as important but users often settle
-for the default option, even when there are alternatives.
+This sounds pretty dumb, right? Just move the seat back. Buy better stationary.  These examples are trivial and can be fixed with almost no effort. The thing is, computer interfaces are <s>arguably</s> just as important but users often settle for the default option, even when there are alternatives.
 
-Let me digress a bit, and explain what I mean by "Desktop environment".  The
-[Wikipaedia article](https://en.wikipedia.org/wiki/Desktop_environment) talks
-about the icon, window and toolbar metaphors (although you might not want to
-read too closely or you'll find
-[this](https://en.wikipedia.org/wiki/WIMP_(computing)) page). To me, a good DE
-is defined by workflows rather than specific elements. It should have:
+![]({{ site.baseurl }}images/desktop_environment/robowarrior_.png){: .center-image}
+Desktops can be both functional and elegant  
+Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)
+{: .caption}
+
+Let me digress a bit, and explain what I mean by "Desktop environment".  The [Wikipaedia article](https://en.wikipedia.org/wiki/Desktop_environment) talks about the icon, window and toolbar metaphors (although you might not want to read too closely or you'll find [this](https://en.wikipedia.org/wiki/WIMP_(computing)) page). To me, a good DE is defined by **workflows** rather than specific elements. It should have:
 
 + The ability to launch apps with minimal friction
-+ Window management that doesn't get overwhelming as I open an increasing number
-  of apps
++ Window management that doesn't get overwhelming as I open an increasing number of apps
 + An area to represent background apps which don't always have their own window
 + A way to group windows into separate workspaces
 + A notification system which gets my attention without being irritating
 + Controls and feedback for volume, brightness etc.
 + The ability to tuck itself away, giving complete focus to the app I'm working on
 
+Personally, I have tried a fair number Linux desktop environments  over the years, including [KDE](https://www.kde.org/), [Cinnamon](https://github.com/linuxmint/Cinnamon), [Unity](http://unity.ubuntu.com/about), Elementary OS' [Pantheon](https://en.wikipedia.org/wiki/Elementary_OS), [Gnome 3](https://www.gnome.org/gnome-3/) and [i3wm](https://i3wm.org/). I've even experimented with [LiteStep](http://litestep.info/), an alternative to explorer.exe on Windows.
+
+As is often the case with software, all of the above had elements that I was really impressed with, but equally had failings which made me move on. I'll mention a few that really stood out to me.
+
+**Pantheon desktop** uses an app launcher called *Slingshot*. 
+
+![]({{ site.baseurl }}images/desktop_environment/slingshot.png){: .center-image style="width:75%;"}
+Slingshot launcher
+{: .caption}
+
+It's simple, fast, and fits my use case exactly. If I want to open Chrome, all I need to do is hit <kbd>Super</kbd><kbd>c</kbd><kbd>h</kbd><kbd>r</kbd><kbd>Enter</kbd>. No need to involve the mouse or remember the full name of the binary. Even though most launchers (including the Windows Start Menu) work like this these days, Slingshot *just works*, and looks elegant in the process.
+
+**Unity** has a pleasantly minimal status bar. It lends itself to the style that macOS has gone with, which I think is a good thing.
+
+![]({{ site.baseurl }}images/desktop_environment/unity.png){: .center-image style="width:75%"}
+Unity
+{: .caption}
+
+Some people don't like that it also acts as a menu bar (File, Edit, etc.), but I think that it helps with keeping everything consistent. That said, there is one corner case that I encounter quite often: If I'm looking at a particular window, but for some reason have a different one selected, it can be disorientating to get a different set of menu bar options to what I'm expecting. I don't have a good solution to this, but it's still irritating. Either way, this style is optional in Ubuntu 16.04 and later.
+
+**i3wm** gets an honourable mention for window management. Being a tiling window manager, it's kind of in a different league to everything else I've worked with, and it definitely has it's place. Its basic philosophy guarantees an extremely efficient workflow, which I admire. Unfortunately, I found myself trying to force it to be a full desktop environment, which is was never meant to be. This included code in my i3 config like the following:
+
+```bash
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; killall notify-osd; notify-send 'Backlight' `xbacklight`"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; killall notify-osd; notify-send 'Backlight' `xbacklight`"
+```
+
+This attempts to add brightness controls via the function keys on my laptop, and give feedback via a notification pop-up. All I learned was that I was trying to cram a square peg in a round hole.
+
+Some days, I feel kind of bad for not using something like i3wm. My inner neckbeard tries to convince me that I'm a sellout, but honestly, I firmly believe that I shouldn't have to compromise on aesthetics and conveniences like pretty volume sliders. I should be able to have both. Sorry, i3wm.
+
 ---
 
-+ Personal history Have tried a few. By no means all, but enough to understand
-  what's out there.
-    + KDE
-    + Cinnamon
-    + Unity
-    + Gnome3
-    + Pantheon
-    + i3
-    + Even [LiteStep](http://litestep.info/) on Windows
+## WIP
 
-+ Elements I like
-    + Pantheon - Slingshot
-    + Unity - slim top bar, like OSX
-
++ Gnome 3 Expose
 + I chose Unity
     + Stock is actually pretty good
     + How to make it even better
