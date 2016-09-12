@@ -23,9 +23,10 @@ Let me digress a bit, and explain what I mean by "Desktop environment".  The [Wi
 
 Personally, I have tried a fair number Linux desktop environments  over the years, including [KDE](https://www.kde.org/), [Cinnamon](https://github.com/linuxmint/Cinnamon), [Unity](http://unity.ubuntu.com/about), Elementary OS' [Pantheon](https://en.wikipedia.org/wiki/Elementary_OS), [Gnome 3](https://www.gnome.org/gnome-3/) and [i3wm](https://i3wm.org/). I've even experimented with [LiteStep](http://litestep.info/), an alternative to explorer.exe on Windows.
 
-As is often the case with software, all of the above had elements that I was really impressed with, but equally had failings which made me move on. I'll mention a few that really stood out to me.
+As is often the case with software, all of the above had elements that I was really impressed with, but equally had failings which made me move on. I'll mention some thoughts on three that stood out to me.
 
-**Pantheon desktop** uses an app launcher called *Slingshot*. 
+### Pantheon desktop
+Elementary OS uses an app launcher called *Slingshot*. 
 
 ![]({{ site.baseurl }}images/desktop_environment/slingshot.png){: .center-image style="width:75%;"}
 Slingshot launcher
@@ -33,7 +34,8 @@ Slingshot launcher
 
 It's simple, fast, and fits my use case exactly. If I want to open Chrome, all I need to do is hit <kbd>Super</kbd><kbd>c</kbd><kbd>h</kbd><kbd>r</kbd><kbd>Enter</kbd>. No need to involve the mouse or remember the full name of the binary. Even though most launchers (including the Windows Start Menu) work like this these days, Slingshot *just works*, and looks elegant in the process.
 
-**Unity** has a pleasantly minimal status bar. It lends itself to the style that macOS has gone with, which I think is a good thing.
+### Unity
+Ubuntu's default desktop environment has a pleasantly minimal status bar. It lends itself to the style that macOS has gone with, which I think is a good thing.
 
 ![]({{ site.baseurl }}images/desktop_environment/unity.png){: .center-image style="width:75%"}
 Unity
@@ -41,27 +43,32 @@ Unity
 
 Some people don't like that it also acts as a menu bar (File, Edit, etc.), but I think that it helps with keeping everything consistent. That said, there is one corner case that I encounter quite often: If I'm looking at a particular window, but for some reason have a different one selected, it can be disorientating to get a different set of menu bar options to what I'm expecting. I don't have a good solution to this, but it's still irritating. Either way, this style is optional in Ubuntu 16.04 and later.
 
-**i3wm** gets an honourable mention for window management. Being a tiling window manager, it's kind of in a different league to everything else I've worked with, and it definitely has it's place. Its basic philosophy guarantees an extremely efficient workflow, which I admire. Unfortunately, I found myself trying to force it to be a full desktop environment, which is was never meant to be. This included code in my i3 config like the following:
+### i3
+An honourable mention for window management goes to i3wm. Being a tiling window manager, it's kind of in a different league to everything else I've worked with, and it definitely has it's place. Its basic philosophy guarantees an extremely efficient workflow, which I admire. Unfortunately, I found myself trying to force it to be a full desktop environment, which is was never meant to be. This included code in my i3 config like the following:
 
 ```bash
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; killall notify-osd; notify-send 'Backlight' `xbacklight`"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; killall notify-osd; notify-send 'Backlight' `xbacklight`"
 ```
 
-This attempts to add brightness controls via the function keys on my laptop, and give feedback via a notification pop-up. All I learned was that I was trying to cram a square peg in a round hole.
+This attempts to add brightness controls via the function keys on my laptop, and give feedback via a notification pop-up. What I learned:
 
-Some days, I feel kind of bad for not using something like i3wm. My inner neckbeard tries to convince me that I'm a sellout, but honestly, I firmly believe that I shouldn't have to compromise on aesthetics and conveniences like pretty volume sliders. I should be able to have both. Sorry, i3wm.
++ Most implementations of `notify-send` suck. Especially Ubuntu's
++ i3wm is not a full desktop environment, no matter how badly you want it to be
 
----
 
-## WIP
+Some days, I feel kind of bad for not using something like i3wm. My inner hacker tries to convince me that I'm a sellout, but honestly, I firmly believe that I shouldn't have to compromise on aesthetics and conveniences like pretty volume sliders. I should be able to have both. Sorry, i3wm.
 
-+ Gnome 3 Expose
-+ I chose Unity
-    + Stock is actually pretty good
-    + How to make it even better
-        + Themes - Numix, Paper Icons
-        + dconf
-+ Options for non-linux users
-    + Alfred
-    + Clipboard managers
+## So what do I use?
+
+At the time of this post, I'm using Unity. Not because I think it's amazing, but because it has the least drawbacks. It has a fairly good perspective on the workflows that I care about, and has sane defaults. I only change two things on a fresh install. First, I set up a combination of the [Numix](https://numixproject.org/) theme and the [Paper](https://snwh.org/paper) icon set. Then, I disable 'scopes' that I don't care about like so:
+
+```bash
+dconf write /com/canonical/unity/dash/scopes "['home.scope', 'applications.scope', 'files.scope']"
+```
+
+This reduces clutter in the app launcher and allows me to use key combinations like <kbd>Super</kbd>+<kbd>c</kbd> to open Chrome instead of the 'Photos' scope.
+
+## Final thoughts
+
+I think that what software you use isn't particularly important, as long as it works well for you. The catch is that it's important to know what's out there. This means being willing to do research and leave your comfort zone to experiment. Also, not having a Linux setup doesn't mean that you don't have options; workflows can be improved with simple apps like a clipboard manager, or something like [Alfred](https://www.alfredapp.com/) for macOS. You'll find what works for you - just don't stop trying to make your environment better.
