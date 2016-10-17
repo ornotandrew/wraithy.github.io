@@ -67,7 +67,7 @@ At the time of this post, I'm using Unity. Not because I think it's amazing, but
 dconf write /com/canonical/unity/dash/scopes "['home.scope', 'applications.scope', 'files.scope']"
 ```
 
-This reduces clutter in the app launcher and allows me to use key combinations like <kbd>Super</kbd>+<kbd>c</kbd> to open Chrome instead of the 'Photos' scope.
+This reduces clutter in the app launcher and allows me to use key combinations like <kbd>Super</kbd>+<kbd>c</kbd> to open Chrome (instead of the 'Photos' scope).
 
 ## Final thoughts
 
