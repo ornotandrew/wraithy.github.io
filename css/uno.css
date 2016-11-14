@@ -1215,6 +1215,7 @@ hr {
 	background-size: cover; }
 
 .panel-cover--collapsed {
+    background-position: left bottom;
 	width: 360px; }
 
 .panel-cover--overlay {
@@ -1556,11 +1557,10 @@ input[type="tel"] {
 		margin-left: 0; }
 
 	.panel-cover--collapsed {
-		background-position: left center; }
+		background-position: left bottom; }
     
     }
 @media all and (max-width: 768px) {
-
 	.panel-main {
 		display: table;
 		position: relative; }
