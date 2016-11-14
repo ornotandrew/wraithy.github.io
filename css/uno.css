@@ -1210,12 +1210,12 @@ hr {
 	width: 100%;
 	max-width: none;
 	height: 100%;
-	background: url(../images/background-cover.jpg) bottom left no-repeat #666666;
+	background: url(../images/background-cover.jpg) no-repeat #666666;
+    background-position: bottom center;
 	background-size: cover; }
 
 .panel-cover--collapsed {
-	width: 40%;
-	max-width: 530px; }
+	width: 360px; }
 
 .panel-cover--overlay {
 	display: block;
@@ -1338,26 +1338,6 @@ hr {
 .btn-small {
 	padding: 8px 12px;
 	font-size: .7em; }
-
-.btn-mobile-menu {
-	display: none;
-	position: fixed;
-	z-index: 9999;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: 100%;
-	height: 42px;
-	background: rgba(0, 0, 0, 0.40);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	text-align: center; }
-
-.btn-mobile-menu__icon,
-.btn-mobile-close__icon {
-	position: relative;
-	top: 3px;
-	font-size: 36px;
-	color: #FFF; }
 
 nav {
 	display: inline-block;
@@ -1560,6 +1540,8 @@ input[type="tel"] {
 		width: 70px; }
 
 	.panel-title {
+        padding-left: 1em;
+        padding-right: 1em;
 		font-size: 2em; }
 
 	.panel-subtitle {
@@ -1571,10 +1553,13 @@ input[type="tel"] {
 
 	.navigation--social {
 		margin-top: 5px;
-		margin-left: 0; } }
+		margin-left: 0; }
+
+	.panel-cover--collapsed {
+		background-position: left center; }
+    
+    }
 @media all and (max-width: 768px) {
-	.btn-mobile-menu {
-		display: block; }
 
 	.panel-main {
 		display: table;
@@ -1618,7 +1603,7 @@ input[type="tel"] {
 				display: none;
 				margin: 1em auto; }
 
-	.navigation-wrapper {
+	.panel-cover--collapsed .navigation-wrapper {
 		display: none;
 		position: fixed;
 		top: 42px;
@@ -1631,23 +1616,23 @@ input[type="tel"] {
 		.navigation-wrapper.visible {
 			display: block; }
 
-	.cover-navigation {
-		display: block;
-		position: relative;
-		float: left;
-		clear: left;
-		width: 100%; }
-		.cover-navigation .navigation {
-			display: block;
-			width: 100%; }
-			.cover-navigation .navigation li {
-				width: 80%;
-				margin-bottom: .4em; }
-		.cover-navigation.navigation--social {
-			padding-top: 5px; }
-			.cover-navigation.navigation--social .navigation li {
-				display: inline-block;
-				width: 25.8%; }
+	/* .cover-navigation { */
+	/* 	display: block; */
+	/* 	position: relative; */
+	/* 	float: left; */
+	/* 	clear: left; */
+	/* 	width: 100%; } */
+	/* 	.cover-navigation .navigation { */
+	/* 		display: block; */
+	/* 		width: 100%; } */
+	/* 		.cover-navigation .navigation li { */
+	/* 			width: 80%; */
+	/* 			margin-bottom: .4em; } */
+	/* 	.cover-navigation.navigation--social { */
+	/* 		padding-top: 5px; } */
+	/* 		.cover-navigation.navigation--social .navigation li { */
+	/* 			display: inline-block; */
+	/* 			width: 25.8%; } */
 
 	.content-wrapper {
 		width: 80%;
@@ -1658,20 +1643,7 @@ input[type="tel"] {
 		margin-right: 0;
 		margin-left: 0; }
 
-	.navigation__item {
-		width: 100%;
-		margin: 0 0 .4em 0; } }
-@media all and (max-width: 340px) {
-	.panel-main__inner {
-		padding: 0 5%; }
-
-	.panel-title {
-		margin-bottom: .1em;
-		font-size: 1.5em; }
-
-	.panel-subtitle {
-		font-size: .9em; }
-
-	.btn, .navigation__item a {
-		display: block;
-		margin-bottom: .4em; } }
+	/* .navigation__item { */
+	/* 	width: 100%; */
+	/* 	margin: 0 0 .4em 0; } */
+    }
