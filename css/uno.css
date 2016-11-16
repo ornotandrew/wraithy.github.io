@@ -1100,7 +1100,8 @@ pre {
 	z-index: 800;
 	width: 60%;
 	max-width: 800px;
-	margin-left: 40%; }
+	margin-right: auto;
+	margin-left: auto; }
 
 .content-wrapper__inner {
 	margin: 0 10%;
@@ -1533,34 +1534,10 @@ input[type="tel"] {
 	input[type="tel"]:-ms-input-placeholder {
 		color: #cccccc; }
 
-@media all and (min-width: 1300px) {
+@media all and (max-width: 1800px) {
 	.content-wrapper {
-		margin-left: 530px; } }
-@media all and (max-width: 1100px) {
-	.panel-cover__logo {
-		width: 70px; }
-
-	.panel-title {
-        padding-left: 1em;
-        padding-right: 1em;
-		font-size: 2em; }
-
-	.panel-subtitle {
-		font-size: 1em; }
-
-	.panel-cover__description {
-		margin: 0 10px;
-		font-size: .9em; }
-
-	.navigation--social {
-		margin-top: 5px;
-		margin-left: 0; }
-
-	.panel-cover--collapsed {
-		background-position: left bottom; }
-    
-    }
-@media all and (max-width: 768px) {
+		margin-left: 400px; } }
+@media all and (max-width: 1080px) {
 	.panel-main {
 		display: table;
 		position: relative; }
