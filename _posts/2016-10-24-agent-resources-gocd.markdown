@@ -1,12 +1,13 @@
 ---
 title:  "Agent Resources in GoCD"
-categories: [GoCD, CI]
-tags: [GoCD, CI]
+categories: [gocd, ci, docker]
+tags: [gocd, ci, docker]
 ---
 
 Lately I've been working with [GoCD](https://go.cd). It's an open source continuous integration tool which has both driven me crazy and blown my mind in countless ways over the past 8 months or so. It isn't as well-known as Jenkins or Travis, but some of its core principles are fundamentally different to (and in my opinion, better than) any other CI tool I'm aware of.
 
 [![]({{ site.baseurl }}images/gocd_agent_resources/interest.png)](https://www.google.com/trends/explore?date=2008-01-01%202016-11-15&q=GoCD,Jenkins%20CI,Travis%20CI,Circle%20CI,Codeship){: .center-image}
+
 Google searches for popular CI tools
 {: .caption}
 
@@ -19,9 +20,12 @@ Having moved to GoCD, I don't regret the decision. Even though there are at leas
 
 GoCD operates with one server node and multiple worker nodes. The central server hosts the web interface and keeps track of pipelines and artifacts. Workers check in on a specific port, and ask for jobs to run. If you're thinking that this sounds like a cluster management system, you're right! In fact, we use the Docker containers provided by the GoCD team, and there has even been some initial work done on [elastic agents](https://plugin-api.go.cd/current/elastic-agents/).
 
-This approach isn't unique to GoCD, but the tool does go a bit further with **agent resources**. Basically, each job can be tagged with things like `python3-dev`, `windows` or `libcurl`. While being just text, they can be extremely powerful. The server will only give a job to an agent if that agent also has those tags. I made an animation to demonstrate.
+This approach isn't unique to GoCD, but the tool does go a bit further with **agent resources**. Basically, each job can be tagged with things like `python3-dev`, `windows` or `libcurl`. While being just text, they can be extremely powerful. The server will only give a job to an agent if that agent also has those tags. Here's an animation to demonstrate.
 
-![]({{ site.baseurl }}images/gocd_agent_resources/arch.gif){: .center-image}
+[![]({{ site.baseurl }}images/gocd_agent_resources/arch.gif)]({{ site.baseurl }}images/gocd_agent_resources/arch.gif){: .center-image}
+
+A master/worker CI system with two different types of workers
+{: .caption}
 
 The white block in the lower right is the server node. The blue and purple blocks are agents with two different tags.
 
@@ -39,10 +43,20 @@ Going forward, I will always recommend that the pipelines configuration comes fi
 
 Here's a diagram of the agents that I ended up with.
 
-![]({{ site.baseurl }}images/gocd_agent_resources/agents.png){: .center-image}
+[![]({{ site.baseurl }}images/gocd_agent_resources/agents.png)]({{ site.baseurl }}images/gocd_agent_resources/agents.png){: .center-image}
+
+Separation of concern for Docker-based worker agents
+{: .caption}
 
 
-
-### PS
+### P.S.
 
 GoCD also has a concept of 'environments', which function similarly to resources. I did try to make use of the feature, but it didn't quite suit my use case.
+
+### More resources
+
+Trends for CI tools - [google trends](https://www.google.com/trends/explore?date=2008-01-01%202016-11-15&q=GoCD,Jenkins%20CI,Travis%20CI,Circle%20CI,Codeship)  
+How Dockerfiles work with layers - [docker docs](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)  
+GoCD Docker images - [dockerhub](https://hub.docker.com/u/gocd/) | [github](https://github.com/gocd/gocd-docker)  
+GoCD elastic agents - [beta docs](https://plugin-api.go.cd/current/elastic-agents/)  
+Resources, jobs, stages and pipelines in GoCD - [gocd concepts](https://docs.go.cd/current/introduction/concepts_in_go.html)  
