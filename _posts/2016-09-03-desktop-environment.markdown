@@ -1,5 +1,7 @@
 ---
 title:  "Desktop environments"
+categories: [desktop environment, unity, elementary os, pantheon]
+tags: [desktop environment, unity, elementary os, pantheon]
 ---
 
 If you spend 8+ hours a day working in a particular space, it's pretty important that it's comfortable and allows you to be productive. If you spend a lot of time driving with your seat too close to the wheel, your back will start hurting. If your office is filled with with crappy stationary, you'll end up frustrated with pens containing gravity-defying ink and staplers which are only good for making holes in paper.
