@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://wraithy.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Nov 2019 10:34:53 GMT</lastBuildDate><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
+great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://wraithy.github.io/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://wraithy.github.io/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
+great, but the alt+tab functionality gets under my skin. My level of
+frustration has been enough to send me Googling for ways to change the default
+behaviour, but not enough to do anything constructive about it. I suppose this
+should end up as a &lt;a href=&quot;https://github.com/search?utf8=%E2%9C%93&amp;#x26;q=is%3Aopen+is%3Aissue+user%3Aelementary+label%3A%22Needs+Design%22&quot;&gt;“Needs design”
+issue&lt;/a&gt;,
+but at the time of this post I happened to feel like ranting, so I did that
+instead. Below is that rant — you have been warned. It details some specifics
+about why I think alt+tab in elementary OS is broken.&lt;/p&gt;
+&lt;h2&gt;The search for a fix&lt;/h2&gt;
+&lt;p&gt;First of all, there are plenty of complaints about this. There didn’t seem to
+be any solutions on the discussions I found, but what disappointed me was that
+in many of those threads, the responses were defensive — comments like “I don’t
+really know why you would want something other than what we have now”.&lt;/p&gt;
+&lt;p&gt;Seriously? From my perspective, alt+tab switching is hands down the worst part
+of elementary OS. It frustrates me &lt;em&gt;literally&lt;/em&gt; every time I use it. I’d say
+that from a UX standpoint, it breaks continuity in more than one big way.&lt;/p&gt;
+&lt;p&gt;For reference, below is a short video of me switching through a typical set of
+open windows.&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;center&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/ta7itUYlLvk&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt;&lt;/center&gt; &lt;/div&gt;
+&lt;h2&gt;The dock in general&lt;/h2&gt;
+&lt;p&gt;I appreciate the idea of overloading the dock, and I think it could work, but
+It needs more design. Plank only shows you the currently open apps while
+alt-tabbing, and this can be jarring if the number of apps you have open is
+very different from the number you have pinned.&lt;/p&gt;
+&lt;p&gt;In the extreme case, when you alt+tab your “dock” suddenly looks very different
+— so much so that it takes my brain a split second to register it as “my dock”.
+This is confusing because although the two different modes provide completely
+different functionality, they look &lt;em&gt;kind of&lt;/em&gt; the same. I mean this in the sense
+that they are both in the same area of the screen and have the same background,
+but show a different list of apps and have different widths. The change in
+width is the real culprit for me here — I have many apps pinned, so if I only
+have three or four apps open, hitting alt+tab makes my dock do a vanishing act.
+This confusion is compounded by the fact that I auto-hide my dock.&lt;/p&gt;
+&lt;p&gt;If it was my choice, I would either stop overloading the dock or make it work
+more like the current alt+esc functionality (except of course it would cycle
+through all apps instead of the most recent two).&lt;/p&gt;
+&lt;h2&gt;The window fly-in/out animations&lt;/h2&gt;
+&lt;p&gt;I like animations which are applied tastefully and don’t get in the way. But
+let’s look at what the alt-tab switcher is supposed to do…&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.188443519000522%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAABeUlEQVQY0wFuAZH+AEtUZkpRYEdPX01TX5eBa7++vsnJycvMzcfCv5OAZ3FqWntqVeCweOW5h8WlgbuTbOGsb+C1dsuidrmWbwArO1kzQV0rOlcjM05TVFLv8/f////8/v////aihGceIygkKCxeU0J/alJUTEJ1cnPMuavp2cDn1MHgy7gALzxRND9OPEhaQEteR09Vzs/Qy83NxMfI1s3DknZaDQ4QGBcWDA4RBwsPEBIUOEZYusTQ+v//7fX88fDvABYfJRUgJI2SlOfl5djX2dPX22Rqazk+PjI3OSgqKhcXGBkaGhsbGxsaGRscHDI2PsHAwv///////unp6AANFiAACxWZn6L////7+/v///9YYGULFR0KExsFDBQOFRkQGB8UHiUVICYXIykfKzNBS1FLU1pDS1E4PkQACxQcBQ8YP0hPcnZ6b29xb3d9JzE5BxEaBw0UAgcOBg8XChQcChUeDRkiER4oEh8oCxghBREaAQkRAAEI96yTQ+sose0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Window overview via super+a&quot;
+        title=&quot;Window overview via super+a&quot;
+        src=&quot;/static/82db7eeb88a089f6f975392d936bea5a/b9e4f/super-a.png&quot;
+        srcset=&quot;/static/82db7eeb88a089f6f975392d936bea5a/cf440/super-a.png 148w,
+/static/82db7eeb88a089f6f975392d936bea5a/d2d38/super-a.png 295w,
+/static/82db7eeb88a089f6f975392d936bea5a/b9e4f/super-a.png 590w,
+/static/82db7eeb88a089f6f975392d936bea5a/f9b6a/super-a.png 885w,
+/static/82db7eeb88a089f6f975392d936bea5a/2d849/super-a.png 1180w,
+/static/82db7eeb88a089f6f975392d936bea5a/90707/super-a.png 3842w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Window overview via super+a&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;In my opinion, alt+tab should be a quicker version of the window
+overview/expose/super+a. I should be able to get a quick, general overview of
+how many things I have open, and at a glance be able to tell how many times I
+should tap tab to get to the one I want. If the number of open apps is small
+enough, the first time I cycle through them should provide me with a mental
+model of their order, so next time I know how many times to cycle without even
+having to see the list.&lt;/p&gt;
+&lt;p&gt;Having an animation as grand as the current one breaks any mental model that I
+have in my head. It’s generally disorienting, and worse, the chosen animation
+makes it look like the apps are moving (coming and going from the centre of the
+screen) as you cycle. I don’t want to have to do extra work by trying to
+mentally block out the animation to keep my mental model consistent.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZf426LFRf/EABkQAAIDAQAAAAAAAAAAAAAAAAECAAMQEv/aAAgBAQABBQKizmOyjFlbkZ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAcEAABAwUAAAAAAAAAAAAAAAABAAIQETFBUWH/2gAIAQEABj8Co6yGnZnhEf/EABsQAQACAgMAAAAAAAAAAAAAAAEAESFBEDFR/9oACAEBAAE/IRxFW76hGxIB3LfWZRtByLOP/9oADAMBAAIAAwAAABD87//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQACAwADAAAAAAAAAAAAAAEAESFRYTFxwf/aAAgBAQABPxCze1gQr6SmC+ZQq0McercDTNTyjkcj332LP//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Minimize on MacOS&quot;
+        title=&quot;Minimize on MacOS&quot;
+        src=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/c739e/macos-minimize.jpg&quot;
+        srcset=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/8ee9c/macos-minimize.jpg 148w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/ebbe7/macos-minimize.jpg 295w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/c739e/macos-minimize.jpg 590w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/5413e/macos-minimize.jpg 885w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/4efde/macos-minimize.jpg 1180w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/13ead/macos-minimize.jpg 3360w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I know it’s for a different operation, but a good example of how to to this
+properly is the minimize/maximize animation in the macOS dock.&lt;/p&gt;
+&lt;p&gt;They use an animation that goes out of its way to map how the app fits into the
+bigger picture.&lt;/p&gt;
+&lt;p&gt;The fly-in/out animation on elementary OS does the opposite — it provides no
+actual value, and just adds more cognitive load.&lt;/p&gt;
+&lt;h2&gt;Multi-monitor&lt;/h2&gt;
+&lt;p&gt;This one is really simple.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A)&lt;/strong&gt; Plank on elementary defaults to having one dock — on the main screen&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B)&lt;/strong&gt; Plank is used as the alt+tab switcher&lt;/p&gt;
+&lt;p&gt;I don’t disagree with either of these choices, but they can’t be used together.
+Pick one and move on from there.&lt;/p&gt;
+&lt;p&gt;I primarily use two screens. It takes mental load to go through the cycle:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hit alt+tab&lt;/li&gt;
+&lt;li&gt;get confused&lt;/li&gt;
+&lt;li&gt;lose my train of thought while trying to grok my screen&lt;/li&gt;
+&lt;li&gt;remember how it works&lt;/li&gt;
+&lt;li&gt;move away from where I was working to look at the bottom of the main screen&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Smaller things&lt;/h2&gt;
+&lt;p&gt;As far as I know, there’s no equivalent of alt+` from other desktops. It would
+be cool if I could cycle between windows of the same app, on multiple screens,
+etc. Not a deal-breaker though.&lt;/p&gt;
+&lt;p&gt;Also, alt+tab with one window open makes the screen flash.&lt;/p&gt;
+&lt;p&gt;/rant&lt;/p&gt;
+&lt;h2&gt;P.S.&lt;/h2&gt;
+&lt;p&gt;Here are some resources if anyone is interested.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tom95/gala-alternate-alt-tab&quot;&gt;https://github.com/tom95/gala-alternate-alt-tab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&quot;&gt;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of these were last updated two years ago. I didn’t try either, so if
+anyone has had a positive experience with them in Loki I’d be interested to
+know.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Agent Resources in GoCD]]></title><description><![CDATA[Lately I’ve been working with GoCD. It’s an open-source continuous integration
+tool which has both driven me crazy and blown my mind in…]]></description><link>https://wraithy.github.io/agent-resources-in-gocd/</link><guid isPermaLink="false">https://wraithy.github.io/agent-resources-in-gocd/</guid><pubDate>Wed, 15 Feb 2017 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Lately I’ve been working with GoCD. It’s an open-source continuous integration
+tool which has both driven me crazy and blown my mind in countless ways over
+the past 8 months or so. It isn’t as well-known as Jenkins or Travis, but some
+of its core principles are fundamentally different to (and in my opinion,
+better than) any other CI tool I’m aware of.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.38578680203045%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAABeklEQVQoz32SW3ObMBCF/f//WN7aTKbjaSYhBYMBY6MLqwtaSbvFuHab1u4ZiYeVvtnD0W6YOWAahRrFaA2gs2BMTpjQAZiYop2tcy6HbMECADOt66wN3xPR/fIvLM0c7UP4gVZywfQ7IzyElYn/gHnBaJYENSdP/7E9SOTbn12UkXTB6jvjdHOxsdamlD47424MCuIfJWIKNH34OcxIvUS9Wtt473POf3UWE1b9cvNcT8Szg2NXi1FJk4SKUFazlA9tO2Rl0yBjN8ah3XVNYz1NPpvO6ucavu2yC1d4eZnbWmUkcESmFKYu2HHNK9vygPUBJz04ESLe75yNho8i9k0snvJQkDxkLWBbJmECh94PkSJdAls2gphev/i6MkMTjnvX79VRoG5QNgjGC6WrkxFWxUl4EVK4DcsZPvVt/bp9//pSFdvq7WVflvWPYle+tW0/DMdm37an7qAPJzUu6Vpznlaia+dL2pl+Dyath/RZy7Xlu7wrXaP5CcDe9OyxBCE5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;CI tool comparison&quot;
+        title=&quot;Google searches for popular CI
+tools&quot;
+        src=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/b9e4f/interest-graph.png&quot;
+        srcset=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/cf440/interest-graph.png 148w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/d2d38/interest-graph.png 295w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/b9e4f/interest-graph.png 590w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png 788w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Google searches for popular CI
+tools&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;The graph above paints a pretty accurate picture of this space. A few years
+ago, everyone (including us) was using Jenkins. There has been some effort to
+improve Jenkins (e.g. by adding a plugin for pipelines), but it has pretty much
+been succeeded by Travis. Circle CI is also proving to be a dominant force, and
+seems to be the service which is attracting all the cool kids.&lt;/p&gt;
+&lt;p&gt;Having moved to GoCD, I don’t regret the decision. Even though there are at
+least 4 other more popular tools, I’m a firm believer in GoCD’s vision of
+pipelines as a first-class citizen. While it still lacks in some areas like the
+UI, these are being actively worked on. The project is still young, and major
+new features are still being added in the monthly releases.&lt;/p&gt;
+&lt;h2&gt;Agents and Resources&lt;/h2&gt;
+&lt;p&gt;GoCD operates with one server node and multiple worker nodes. The central
+server hosts the web interface and keeps track of pipelines and artifacts.
+Workers check in on a specific port, and ask for jobs to run. If you’re
+thinking that this sounds like a cluster management system, you’re right! In
+fact, we use the Docker containers provided by the GoCD team, and there has
+even been some initial work done on &lt;a href=&quot;https://plugin-api.go.cd/current/elastic-agents/&quot;&gt;elastic
+agents&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This approach isn’t unique to GoCD, but the tool does go a bit further with
+&lt;strong&gt;agent resources&lt;/strong&gt;. Each job can be tagged with things like &lt;code class=&quot;language-text&quot;&gt;python3-dev&lt;/code&gt;,
+&lt;code class=&quot;language-text&quot;&gt;windows&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;libcurl&lt;/code&gt;. While being just text, they can be extremely powerful.
+The server will only give a job to an agent if that agent also has those tags.
+Here’s an animation to demonstrate.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/7981666968d52e0e6feeeb6e9d444e15/delegation.gif&quot; alt=&quot;Delegation animation&quot; title=&quot;A master/worker CI system with two
+different types of workers&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The white block in the lower right is the server node. The blue and purple
+blocks are agents with two different tags.&lt;/p&gt;
+&lt;p&gt;During a recent refactor of our CI system, I took the opportunity to redefine
+how these tags were set up, and what was installed on our agents. This was
+sorely needed because when we initially set our agents up, we had only just
+begun to play with Docker. We had two different agents which were both overly
+complicated, had large Dockerfiles and took hours to build. So I decided to hop
+over to the opposite end of the spectrum. I was going to adopt the microservice
+philosophy and build many agents, all of which performed one very specific
+function and therefore had small, easily manageable Dockerfiles.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1&gt;These ‘micro-agents’ were going to be &lt;em&gt;amazing&lt;/em&gt;.&lt;/h1&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;What I learned&lt;/h2&gt;
+&lt;p&gt;This scheme worked great for a while. I had agents for various languages, one
+that knew how to build Docker images, one that knew how to deploy to Google
+Cloud Platform, one that could build our documentation and more…&lt;/p&gt;
+&lt;p&gt;Then I came across a situation where I needed to build the documentation and
+deploy it in the same unit of work. This was impossible, because no one agent
+could do both tasks. While you generally want to split building and deploying,
+sometimes it just doesn’t make sense. GoCD is quite particular about what
+pipelines/stages/jobs should be, and swimming against that current is a &lt;em&gt;very&lt;/em&gt;
+bad idea. I know this from experience, so rewriting my pipelines by splitting
+jobs up wasn’t an option.&lt;/p&gt;
+&lt;p&gt;It became clear that there’s a trade-off. You either get manageable agents or
+sane pipelines. Not both.&lt;/p&gt;
+&lt;p&gt;Going forward, I will always recommend that the pipelines configuration comes
+first. Design them without thinking about agents, and work backwards from
+there. Afterwards, if there are groups of jobs which are mutually exclusive,
+then create an agent type for each one. Even with this approach, you might find
+that there are a few things which &lt;em&gt;all&lt;/em&gt; agents need. Docker’s layers can help
+you out here, because you can define a general ‘base agent’ which the other
+types build off.&lt;/p&gt;
+&lt;p&gt;Here’s a diagram of the agents that I ended up with.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.97732104890149%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABh0lEQVQoz31Sy0rDQBTNSlSobZrMTCaTl236iA1N0oiEkIK2ixYxi4KCLv0EV/0DV3YpuHInbt0IXbnxU/Ij3kzaElrpYRjmcc495yYjKLvAWLfblutRQpS9EBRK+VDzWaEKwYphXb593/xkejzGdTG/AuQEdbXeiIksoVoFBkEy1wMI8y6c67v+INQ0jXB/XD1BtRMsVtccLtZ7/uj1K3l+J2YDSdIqeF1sW+Z4dOU4DsaYYOQ9Pk0/fu3prSzWNnqB2p1gvgjni07fbzWbKmPgDF52qxUEgWmaeRKE7PQhevnspfdNywSxjBDvGcny8aGJ5TiKut2uqqqQk1LKGCsWqyzVinR0EIeDNE3Pw9C2bWAKYMI0nRsqRXsgkDggMF0DCEzTThsNMHDOHJjhQCjYrATY+r4fRRHU3jqHcghBVEiNwEkof3q4hlOItFwusyybTCaiKEKJMmED3vMOoORwOJzNZsAge9/Jtrgwd103SRLP8wzD2KP/Xwy/N45jy7Jo6Uns4g/LZ12CpV4+pgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Separation of concern&quot;
+        title=&quot;Separation of concern for Docker-based
+worker agents&quot;
+        src=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/b9e4f/heirarchy.png&quot;
+        srcset=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/cf440/heirarchy.png 148w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/d2d38/heirarchy.png 295w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/b9e4f/heirarchy.png 590w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/f9b6a/heirarchy.png 885w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/2d849/heirarchy.png 1180w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/f5882/heirarchy.png 2822w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Separation of concern for Docker-based
+worker agents&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;P.S.&lt;/h2&gt;
+&lt;p&gt;GoCD also has a concept of ‘environments’, which function similarly to
+resources. I did try to make use of the feature, but it didn’t quite suit my
+use case.&lt;/p&gt;
+&lt;h2&gt;More resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Trends for CI tools — &lt;a href=&quot;https://www.google.com/trends/explore?date=2008-01-01%202016-11-15&amp;#x26;q=GoCD,Jenkins%20CI,Travis%20CI,Circle%20CI,Codeship&quot;&gt;google
+trends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How Dockerfiles work with layers — &lt;a href=&quot;https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/&quot;&gt;docker
+docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GoCD Docker images — &lt;a href=&quot;https://hub.docker.com/u/gocd/&quot;&gt;dockerhub&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/gocd/gocd-docker&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GoCD elastic agents — &lt;a href=&quot;https://plugin-api.go.cd/current/elastic-agents/&quot;&gt;beta
+docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resources, jobs, stages and pipelines in GoCD — &lt;a href=&quot;https://docs.go.cd/current/introduction/concepts_in_go.html&quot;&gt;gocd
+concepts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Desktop Environments]]></title><description><![CDATA[If you spend 8+ hours a day working in a particular space, it’s pretty
+important that it’s comfortable and allows you to be productive. If…]]></description><link>https://wraithy.github.io/desktop-environments/</link><guid isPermaLink="false">https://wraithy.github.io/desktop-environments/</guid><pubDate>Wed, 15 Feb 2017 13:00:00 GMT</pubDate><content:encoded>&lt;p&gt;If you spend 8+ hours a day working in a particular space, it’s pretty
+important that it’s comfortable and allows you to be productive. If you spend a
+lot of time driving with your seat too close to the wheel, your back will start
+hurting. If your office is filled with crappy stationery, you’ll end up
+frustrated with pens containing gravity-defying ink and staplers which are only
+good for making holes in paper.&lt;/p&gt;
+&lt;p&gt;This sounds pretty dumb, right? Just move the seat backwards. Buy better
+stationery.  These examples are trivial and can be fixed with almost no effort.
+The thing is, computer interfaces are just as important but users often settle
+for the default option, even when there are alternatives.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABEUlEQVQoz2MQNzEhD4kZGTHgkRY1NBY1MCJZs5gxiJS1s1RwthU3NgaqI1qzqYm4sYlhtJtjebj/xBzTzEgpaysxY2MiNJuCXKsf7mhX4O9SG+PVmeHUnG+YHiuipy9hakrYZqAi82R3y0w/z/Y0+6pkh8Yig7R4Ym0WMzLW9Ld3qor26c+zqcx06anVjosWNTAQJ8ZmoIclzUy8uzO8+4s8JtY5tlXJ2NuDwoygZqCbgQhouYKjjXaoj3ZEoJyDLVCdpJmZBEFnixobiRoZihgb8+vqC+joCmjrCurpixgaCRkYiKJ6G12zqJGRqp29vpunsZujg7+PsbuHqYezjZ+HqZ+nbUCgmr29KFKEAzUDADWMf2k/tzznAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Elegant desktop&quot;
+        title=&quot;Desktops can be both functional and
+elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&quot;
+        src=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/b9e4f/elegant.png&quot;
+        srcset=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/cf440/elegant.png 148w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/d2d38/elegant.png 295w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/b9e4f/elegant.png 590w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/f9b6a/elegant.png 885w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/3b243/elegant.png 1024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Desktops can be both functional and
+elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Let me digress a bit, and explain what I mean by “Desktop environment”. The
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Desktop_environment&quot;&gt;Wikipaedia article&lt;/a&gt; talks
+about the icon, window and toolbar metaphors (although you might not want to
+read too closely or you’ll find
+&lt;a href=&quot;https://en.wikipedia.org/wiki/WIMP_(computing)&quot;&gt;this&lt;/a&gt; page).&lt;/p&gt;
+&lt;p&gt;To me, a good DE is defined by &lt;strong&gt;workflows&lt;/strong&gt; rather than specific elements.&lt;/p&gt;
+&lt;p&gt;It should have the following.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ability to launch apps with minimal friction&lt;/li&gt;
+&lt;li&gt;Window management that doesn’t get overwhelming as I open an increasing
+number of apps&lt;/li&gt;
+&lt;li&gt;An area to represent background apps which don’t always have their own window&lt;/li&gt;
+&lt;li&gt;A way to group windows into separate workspaces&lt;/li&gt;
+&lt;li&gt;A notification system which gets my attention without being irritating&lt;/li&gt;
+&lt;li&gt;Controls and feedback for volume, brightness etc.&lt;/li&gt;
+&lt;li&gt;The ability to tuck itself away, giving complete focus to the app I’m working
+on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Personally, I have tried a fair number Linux desktop environments over the
+years, including &lt;a href=&quot;https://www.kde.org/&quot;&gt;KDE&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/linuxmint/Cinnamon&quot;&gt;Cinnamon&lt;/a&gt;,
+&lt;a href=&quot;http://unity.ubuntu.com/about&quot;&gt;Unity&lt;/a&gt;, Elementary OS’
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Elementary_OS&quot;&gt;Pantheon&lt;/a&gt;, &lt;a href=&quot;https://www.gnome.org/gnome-3/&quot;&gt;Gnome
+3&lt;/a&gt;and &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt;. I’ve even
+experimented with &lt;a href=&quot;http://litestep.info/&quot;&gt;LiteStep&lt;/a&gt;, an alternative to
+explorer.exe on Windows.&lt;/p&gt;
+&lt;p&gt;As is often the case with software, all of the above had elements that I was
+really impressed with, but equally had failings which made me move on. I’ll
+mention some thoughts on three that stood out to me.&lt;/p&gt;
+&lt;h2&gt;Pantheon desktop&lt;/h2&gt;
+&lt;p&gt;Elementary OS uses an app launcher called &lt;em&gt;Slingshot&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.60927960927961%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAADXklEQVQoz12S609cRRjGz59gWz/4rSZNGqI2aSqWauqtibXrGtOoFU0w9oMm/dKYxkQTJdpggba0UpUUFKpiuiCWxa2wVFhgWS5btiC7y4Hi7nJRYNnLOWfOXM/MOQsbh9ZWY/LLk3ln5nnnfWdGKXFVPPbyO9tKXQ88fuQ+2ySlR7Y/4dqx/6UHy9xbHHDvKHPvPHRs1+E3d7sqHjp4dHuZW6n7eTAcT/RPzQdjqWAsOaouDseSwXgyNLMgCUwneidvB6LJvunkQHQr7J9OPPtJy8MnLpWcbFD84bjDCKO04NiOECZEtuCbBbtgC6ncsgghFueCc9Pieb4h516pvrrzxKVH3m9QOoOTGJoAYmaxpYxx1htfy0PB2Q89U/FUuuCITDabyWQ2i8VRzzeXm+uLBe6uadt1smHPB01KW994dj2dXs9qmr6e08ZiqZymQ2T6ByNzyT8Zo/OJ5NLyMmRsYTw039cFCTla17H7VOPej1qU9kAY6HnNMHTDwBgDXUMYE0qpkM0wOQB6DsglQrFToBublNBX670lH17ZV9mqdI1Mc0ZMhAhl0ovyKYJ0xFgmPIbWlgCEA+pKdOkPhBD+axWoc8yyXvvS9+jHraWfXVW8w1Py5Fw+TxhHxsqq2kG0xSwhzZ5Tesqr6U6lp/GnkWpMxEKnd6L2HOP8WEP3nk89ZZ+3K76xqCMsWZWsEJrGymIUgDxEJLGayGnZbM5Q1Ynb8zEdoEw6vbywyIUob+rdW9XxZO01pXtCLW44CBNMCLUsJgrMEjKX4LbcZ8hMmpnXADAhtQTlQj7qWy39+2q8B+t+keZZ+Z4mwsK2VVWtOl0p1badK72To7NrG46NKaPMksjkEhlUfD+w/7zvmfpupSdy14yE7cTi8fLyN0KhkG0XrvuHhsKq49hoqyN2H3ny2z8OH/jC//zXN5SeW3PSfKdsKtPLAbO4/Ge6AUwA8H9s98zsuGf0qa/6Dl0OKL6bM5wz3YTGPyCpsguACJAK/w+E6Hh7+OnGwRe+HVL8EbVoW1jeL0IU/6sEwTuge9wNIUPmu9cizzWHXvxuRHmv6foZb+h053BV18gZ33j1rzdreiK1/ltnb0yd++338/3RukDswmD8wtDMxaB6MTgreb1t4nDruKs1/DdglO7YYTxURwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;*Slingshot launcher*&quot;
+        title=&quot;Slingshot launcher&quot;
+        src=&quot;/static/2d082a8daaedfdde816cb8802f643284/b9e4f/slingshot.png&quot;
+        srcset=&quot;/static/2d082a8daaedfdde816cb8802f643284/cf440/slingshot.png 148w,
+/static/2d082a8daaedfdde816cb8802f643284/d2d38/slingshot.png 295w,
+/static/2d082a8daaedfdde816cb8802f643284/b9e4f/slingshot.png 590w,
+/static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png 819w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Slingshot launcher&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;It’s simple, fast, and fits my use case exactly. If I want to open Chrome, all
+I need to do is hit SuperchrEnter. No need to involve the mouse or remember the
+full name of the binary. Even though most launchers (including the Windows
+Start Menu) work like this these days, Slingshot &lt;em&gt;just works&lt;/em&gt;, and looks
+elegant in the process.&lt;/p&gt;
+&lt;h2&gt;Unity&lt;/h2&gt;
+&lt;p&gt;Ubuntu’s default desktop environment has a pleasantly minimal status bar. It
+lends itself to the style that macOS has gone with, which I think is a good
+thing.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.829659318637276%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAkElEQVQI12MoDE9PcosIswgItwiIsAgIM/ONsQ2Jtg6KtAwMNfUNMPAINPQEIiAjyTmqKCgz2iYoyiYo2iY4xiaIYXnEjH6Llmg+zzgz73CzoHATf19tV39d9wBdDxDSQyCgoL+eewAQ6XsE6IMYDAuTGntsS3ylnZ29rFw9HaLjQ/yC3J3dbVw8bDGQHZoIADxPNEFS344sAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Unity&quot;
+        title=&quot;Unity&quot;
+        src=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/b9e4f/unity.png&quot;
+        srcset=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/cf440/unity.png 148w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/d2d38/unity.png 295w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/b9e4f/unity.png 590w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/f9b6a/unity.png 885w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/2d849/unity.png 1180w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/10ebc/unity.png 1497w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Unity&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Some people don’t like that it also acts as a menu bar (File, Edit, etc.), but
+I think that it helps with keeping everything consistent. That said, there is
+one corner case that I encounter quite often: If I’m looking at a particular
+window, but for some reason have a different one selected, it can be
+disorientating to get a different set of menu bar options to what I’m
+expecting. I don’t have a good solution to this, but it’s still irritating.
+Either way, this style is optional in Ubuntu 16.04 and later.&lt;/p&gt;
+&lt;h2&gt;i3&lt;/h2&gt;
+&lt;p&gt;An honourable mention for window management goes to i3wm. Being a tiling window
+manager, it’s kind of in a different league to everything else I’ve worked
+with, and it definitely has it’s place. Its basic philosophy guarantees an
+extremely efficient workflow, which I admire. Unfortunately, I found myself
+trying to force it to be a full desktop environment, which it was never meant
+to be. This included code in my i3 config like the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;bindsym XF86MonBrightnessUp &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xbacklight -inc 5; \
+    killall notify-osd; \
+    notify-send &apos;Backlight&apos; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;xbacklight&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+bindsym XF86MonBrightnessDown &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xbacklight -dec 5; \
+    killall notify-osd; \
+    notify-send &apos;Backlight&apos; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;xbacklight&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This attempts to add brightness controls via the function keys on my laptop,
+and give feedback via a notification pop-up. What I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Most implementations of notify-send suck. Especially Ubuntu’s&lt;/li&gt;
+&lt;li&gt;i3wm is not a full desktop environment, no matter how badly you want it to be&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some days, I feel kind of bad for not using something like i3wm. My inner
+hacker tries to convince me that I’m a sellout, but honestly, I firmly believe
+that I shouldn’t have to compromise on aesthetics and conveniences like pretty
+volume sliders. I should be able to have both. Sorry, i3wm.&lt;/p&gt;
+&lt;h2&gt;So what do I use?&lt;/h2&gt;
+&lt;p&gt;At the time of this post, I’m using Unity. Not because I think it’s amazing,
+but because it has the least drawbacks. It has a fairly good perspective on the
+workflows that I care about, and has sane defaults. I only change two things on
+a fresh install. First, I set up a combination of the
+&lt;a href=&quot;https://numixproject.org/&quot;&gt;Numix&lt;/a&gt; theme and the
+&lt;a href=&quot;https://snwh.org/paper&quot;&gt;Paper&lt;/a&gt; icon set. Then, I disable ‘scopes’ that I don’t
+care about like so:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;dconf &lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt; /com/canonical/unity/dash/scopes &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;[&apos;home.scope&apos;, &apos;applications.scope&apos;, &apos;files.scope&apos;]&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This reduces clutter in the app launcher and allows me to use key combinations
+like Super+c to open Chrome (instead of the ‘Photos’ scope).&lt;/p&gt;
+&lt;h2&gt;Final thoughts&lt;/h2&gt;
+&lt;p&gt;I think that what software you use isn’t particularly important, as long as it
+works well for you. The catch is that it’s important to know what’s out there.
+This means being willing to do research and leave your comfort zone to
+experiment. Also, not having a Linux setup doesn’t mean that you don’t have
+options; workflows can be improved with simple apps like a clipboard manager,
+or something like &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; for macOS. You’ll find
+what works for you — just don’t stop trying to make your environment better.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notes to myself]]></title><description><![CDATA[I have never been the kind of person who actively posts on social media. In
+fact, if you were to look through my Facebook/Twitter timelines…]]></description><link>https://wraithy.github.io/notes-to-myself/</link><guid isPermaLink="false">https://wraithy.github.io/notes-to-myself/</guid><pubDate>Wed, 15 Feb 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never been the kind of person who actively posts on social media. In
+fact, if you were to look through my Facebook/Twitter timelines right now, you
+would find a bursting collection of “not much”.&lt;/p&gt;
+&lt;p&gt;This is just &lt;em&gt;who I am&lt;/em&gt;. I have always preferred to consume writing rather than
+generate it. I spend a healthy amount of time reading books, and an unhealthy
+amount of time sifting through Hacker News and Reddit. So, starting a “blog” is
+certainly unusual for me.&lt;/p&gt;
+&lt;h2&gt;Then why?&lt;/h2&gt;
+&lt;p&gt;Recently, I’ve found myself thinking about something specific and wanting to
+record it somewhere. Not for other people to read, but rather to help get my
+thoughts in order and maintain an archive, in case I need to come back to that
+train of thought in the future. At first I looked into note-taking tools like
+Evernote, but ended up leaning towards keeping my own set of markdown files.
+That became a Jekyll blog hosted with Github pages, which in turn led me here.
+I see this as an opportunity for me to organize my thoughts, and openly take
+stock of lessons I’ve learned. If people read what I post — great. If they
+don’t — at least I will.&lt;/p&gt;
+&lt;p&gt;I don’t have a particular plan for what I’ll be writing, but it will likely
+involve&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Programming environments&lt;/strong&gt; — Mostly Vim, but also general workflows inside
+a terminal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tooling around programming for the cloud&lt;/strong&gt; — Specifically CI/CD, Docker and
+Google Cloud Platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There will be code snippets. There will be diagrams. There will be opinions.&lt;/p&gt;</content:encoded></item></channel></rss>
