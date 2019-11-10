@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://wraithy.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 Nov 2019 13:10:27 GMT</lastBuildDate><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
-great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://wraithy.github.io/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://wraithy.github.io/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 Nov 2019 13:20:15 GMT</lastBuildDate><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
+great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level of
 frustration has been enough to send me Googling for ways to change the default
 behaviour, but not enough to do anything constructive about it. I suppose this
@@ -136,7 +136,7 @@ etc. Not a deal-breaker though.&lt;/p&gt;
 &lt;p&gt;Both of these were last updated two years ago. I didn’t try either, so if
 anyone has had a positive experience with them in Loki I’d be interested to
 know.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Agent Resources in GoCD]]></title><description><![CDATA[Lately I’ve been working with GoCD. It’s an open-source continuous integration
-tool which has both driven me crazy and blown my mind in…]]></description><link>https://wraithy.github.io/agent-resources-in-gocd/</link><guid isPermaLink="false">https://wraithy.github.io/agent-resources-in-gocd/</guid><pubDate>Wed, 15 Feb 2017 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Lately I’ve been working with GoCD. It’s an open-source continuous integration
+tool which has both driven me crazy and blown my mind in…]]></description><link>https://andrewvr.dev/agent-resources-in-gocd/</link><guid isPermaLink="false">https://andrewvr.dev/agent-resources-in-gocd/</guid><pubDate>Wed, 15 Feb 2017 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Lately I’ve been working with GoCD. It’s an open-source continuous integration
 tool which has both driven me crazy and blown my mind in countless ways over
 the past 8 months or so. It isn’t as well-known as Jenkins or Travis, but some
 of its core principles are fundamentally different to (and in my opinion,
@@ -271,7 +271,7 @@ docs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Resources, jobs, stages and pipelines in GoCD — &lt;a href=&quot;https://docs.go.cd/current/introduction/concepts_in_go.html&quot;&gt;gocd
 concepts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Desktop Environments]]></title><description><![CDATA[If you spend 8+ hours a day working in a particular space, it’s pretty
-important that it’s comfortable and allows you to be productive. If…]]></description><link>https://wraithy.github.io/desktop-environments/</link><guid isPermaLink="false">https://wraithy.github.io/desktop-environments/</guid><pubDate>Wed, 15 Feb 2017 13:00:00 GMT</pubDate><content:encoded>&lt;p&gt;If you spend 8+ hours a day working in a particular space, it’s pretty
+important that it’s comfortable and allows you to be productive. If…]]></description><link>https://andrewvr.dev/desktop-environments/</link><guid isPermaLink="false">https://andrewvr.dev/desktop-environments/</guid><pubDate>Wed, 15 Feb 2017 13:00:00 GMT</pubDate><content:encoded>&lt;p&gt;If you spend 8+ hours a day working in a particular space, it’s pretty
 important that it’s comfortable and allows you to be productive. If you spend a
 lot of time driving with your seat too close to the wheel, your back will start
 hurting. If your office is filled with crappy stationery, you’ll end up
@@ -448,7 +448,7 @@ experiment. Also, not having a Linux setup doesn’t mean that you don’t have
 options; workflows can be improved with simple apps like a clipboard manager,
 or something like &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; for macOS. You’ll find
 what works for you — just don’t stop trying to make your environment better.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Notes to myself]]></title><description><![CDATA[I have never been the kind of person who actively posts on social media. In
-fact, if you were to look through my Facebook/Twitter timelines…]]></description><link>https://wraithy.github.io/notes-to-myself/</link><guid isPermaLink="false">https://wraithy.github.io/notes-to-myself/</guid><pubDate>Wed, 15 Feb 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never been the kind of person who actively posts on social media. In
+fact, if you were to look through my Facebook/Twitter timelines…]]></description><link>https://andrewvr.dev/notes-to-myself/</link><guid isPermaLink="false">https://andrewvr.dev/notes-to-myself/</guid><pubDate>Wed, 15 Feb 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have never been the kind of person who actively posts on social media. In
 fact, if you were to look through my Facebook/Twitter timelines right now, you
 would find a bursting collection of “not much”.&lt;/p&gt;
 &lt;p&gt;This is just &lt;em&gt;who I am&lt;/em&gt;. I have always preferred to consume writing rather than
