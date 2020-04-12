@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Apr 2020 13:32:42 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
-blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Apr 2020 16:22:31 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
+blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABJ0lEQVQY00VQ607CMBjtBkxxg7kZNRCD/jA+D7sAu4CCiok+h2u3dsMB4X09H4uSnDRft3Prxx4+9sDT1+Hx83C/3o/edhezwpjkZ5McZzsQrUB0QoEB0H2uB4RWwDUvY4NVPXzdjta7u/ftcFUPlrUR5szLNJ8Yl2lpJyU0mschtmIJI0YWgsSwAZWNv+n0ORtn4LV80QBid161A6rQCfPrl8qMFYaTGA3JckKBdqLcedkoKSqSV4uNfcxHI2ex6SellSi9qU3iae7MSytW3Znsx8pNScw8bqcVqEjuRcqM1O3yx0lLPEf7r60F3Jjmdqq6kezOCsTePFe6j91Q8vm0gJ2TVibpQaDCDU61e7HEbnE3ER7JvzdzHXs6GuEXZp22KBrgyy/swH7zgygQ0gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Banner&quot;
+        title=&quot;Banner&quot;
+        src=&quot;/static/bbc11fdad4c4320b474e14cd99a9c0c9/b9e4f/banner.png&quot;
+        srcset=&quot;/static/bbc11fdad4c4320b474e14cd99a9c0c9/cf440/banner.png 148w,
+/static/bbc11fdad4c4320b474e14cd99a9c0c9/d2d38/banner.png 295w,
+/static/bbc11fdad4c4320b474e14cd99a9c0c9/b9e4f/banner.png 590w,
+/static/bbc11fdad4c4320b474e14cd99a9c0c9/f9b6a/banner.png 885w,
+/static/bbc11fdad4c4320b474e14cd99a9c0c9/2d849/banner.png 1180w,
+/static/bbc11fdad4c4320b474e14cd99a9c0c9/77848/banner.png 3000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
 blank slate like this is a developer’s dream — no legacy code, no backward
 compatibility to worry about, and best of all, we could choose The Right
 Technology™ for the job.&lt;/p&gt;
@@ -199,7 +223,31 @@ apply before going ahead.&lt;/li&gt;
 &lt;em&gt;won’t&lt;/em&gt; do and stick to that. It’s easy to get trapped into maintaining
 something which isn’t the right solution.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
-great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
+great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAdUlEQVQI12OwmPQAGVlOehC88Eng/MeWYK75pAfWkx+ELXqas/5F6KInphMfWCIpZkDWaTbxgd3Uh2WbX6avee484yGQC0ROMx6WbXlVsvll+OKnphPu49QMQf7zHvvOfWwOdgVI8/SHlVtfZax94TH7MZrNAPROZ/s2J7HNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Banner&quot;
+        title=&quot;Banner&quot;
+        src=&quot;/static/7f08ffcc657c5d0687a9801aae19ea4b/b9e4f/banner.png&quot;
+        srcset=&quot;/static/7f08ffcc657c5d0687a9801aae19ea4b/cf440/banner.png 148w,
+/static/7f08ffcc657c5d0687a9801aae19ea4b/d2d38/banner.png 295w,
+/static/7f08ffcc657c5d0687a9801aae19ea4b/b9e4f/banner.png 590w,
+/static/7f08ffcc657c5d0687a9801aae19ea4b/f9b6a/banner.png 885w,
+/static/7f08ffcc657c5d0687a9801aae19ea4b/2d849/banner.png 1180w,
+/static/7f08ffcc657c5d0687a9801aae19ea4b/d40c8/banner.png 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level of
 frustration has been enough to send me Googling for ways to change the default
 behaviour, but not enough to do anything constructive about it. I suppose this
