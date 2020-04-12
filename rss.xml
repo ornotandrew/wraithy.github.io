@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Apr 2020 12:00:57 GMT</lastBuildDate><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Apr 2020 13:32:42 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
+blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
+blank slate like this is a developer’s dream — no legacy code, no backward
+compatibility to worry about, and best of all, we could choose The Right
+Technology™ for the job.&lt;/p&gt;
+&lt;p&gt;Three years later, after much pain and suffering, I’m here to do a bit of a
+retrospective. Before diving in though, I’m going to acknowledge two things.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hindsight is 20/20&lt;/li&gt;
+&lt;li&gt;There is no silver bullet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There’s no way of knowing if doing things differently would have resulted in
+less frustration, but there were definitely some key pieces of &lt;em&gt;very important&lt;/em&gt;
+advice around domain/architecture which we chose to ignore. At the time, we
+thought we knew better.&lt;/p&gt;
+&lt;p&gt;So for those who are embarking on similar journeys, here are some of the
+biggest pieces of advice I regret not taking.&lt;/p&gt;
+&lt;h2&gt;Ignored advice #1: Conway’s Law&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Conway%27s_law&quot;&gt;This law&lt;/a&gt; states that
+inevitably, your system’s architecture will in some way resemble the
+organisational structure of your company.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.73666384419983%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAmElEQVQY042QwQrCQAxEsyq1tVXUVm314kHx6K0g6MH//6lO4BXXIurAgyXZnUzW7KVcbOxd4QOxZuIgtsNHrrs4iZH9rwVmjRjHjTlmpVhS80sX6s5ZHMVNXLmzEgXGeW9WDCK7aSomIuOcck7EmqFe20fvavr2YEIgtiepfqzqw3b8+RQaatZi2Kd90ghfDBPMakJkbFZ2xgQFkv6YwawAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Conway’s law&quot;
+        title=&quot;Conway’s law&quot;
+        src=&quot;/static/96005927a7675a35468d4e14b80d7208/b9e4f/conway.png&quot;
+        srcset=&quot;/static/96005927a7675a35468d4e14b80d7208/cf440/conway.png 148w,
+/static/96005927a7675a35468d4e14b80d7208/d2d38/conway.png 295w,
+/static/96005927a7675a35468d4e14b80d7208/b9e4f/conway.png 590w,
+/static/96005927a7675a35468d4e14b80d7208/f9b6a/conway.png 885w,
+/static/96005927a7675a35468d4e14b80d7208/2d849/conway.png 1180w,
+/static/96005927a7675a35468d4e14b80d7208/6ecc2/conway.png 1181w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As our platform has evolved, we’ve written and operated between 30 and 40
+microservices, depending on how you count. Not all still exist, some have been
+rewritten in a different language, etc.&lt;/p&gt;
+&lt;p&gt;The catch is that since we started building, we were never more than a handful
+of backend developers. Because we were always a small, close-knit team, each
+developer would work on all the services. Architecture decisions were made as a
+group, and being on call meant dealing with potential issues in any area.&lt;/p&gt;
+&lt;p&gt;As you can probably guess from the high service-developer ratio, we ended up
+with lots of “separated” yet tightly-coupled services. This hurt us a lot.&lt;/p&gt;
+&lt;p&gt;Because of the coupling, there was an incessant temptation to reduce our
+workload by “just” deploying cross-service changes at the same time, which
+flies in the face of the &lt;a href=&quot;https://youtu.be/PFQnNFe27kU?t=1352&quot;&gt;deploy
+independently&lt;/a&gt; principle.&lt;/p&gt;
+&lt;h2&gt;Ignored advice #2: You aren’t Google&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.3%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABAUlEQVQoz2NgAALHli+MINqh7aucU8vn+MNB8Wn/ZzEmRc7fW9ZYWDPxvyqXEVBaXIiVRRxIswIxBwMhEF91CUzbtX1n+2KpyfJ/GQOLW8cblaiqa4JgCU5RFiCpBcQ6QKwAxCI4DXPo+MKg1vefwaT9P3YFa+Di7EAsAWWr4DSQW0wLTHOJqjPwy1sydptYMvzfwsDg2f2IMa1iA8N8hFJQ0CgBMSgIeBgoBIxQ2hyIM4nVxAX1CgsOeZB3jUGhBMSqaBZhBaAwkgNiJhzyIG/KQ13JjkcdCgDZzInHy4ZA7ERKWIG8LIZDTgCItaHJRoacCEAHoLQnBMRsxIYhxQAArKUs0mG8a8QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;You vs Google&quot;
+        title=&quot;You vs Google&quot;
+        src=&quot;/static/f140b791d819236355eaa1387e173d1a/b9e4f/notgoogle_1.png&quot;
+        srcset=&quot;/static/f140b791d819236355eaa1387e173d1a/cf440/notgoogle_1.png 148w,
+/static/f140b791d819236355eaa1387e173d1a/d2d38/notgoogle_1.png 295w,
+/static/f140b791d819236355eaa1387e173d1a/b9e4f/notgoogle_1.png 590w,
+/static/f140b791d819236355eaa1387e173d1a/f9b6a/notgoogle_1.png 885w,
+/static/f140b791d819236355eaa1387e173d1a/e11df/notgoogle_1.png 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;One of the lesser benefits of microservices is that they can scale
+independently. In our initial design, we had already separated components which
+were expected to be bottlenecks at scale. Reality check: It turns out the scale
+where this would matter is way beyond anything we are likely to encounter.&lt;/p&gt;
+&lt;p&gt;In fact, not only were we guessing about domain boundaries, but each service
+also came with a certain amount of overhead. We run a collection of sidecar
+containers and &lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/&quot;&gt;Kubernetes
+Daemonsets&lt;/a&gt;
+for operations functions (like monitoring and logging). It got to a point where
+we were spending more resources on the supporting infrastructure than our
+actual application. By a large amount.&lt;/p&gt;
+&lt;p&gt;Now, I’m not saying we’d be better off with a monolith, but if we had started
+with a simpler architecture, we could have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Broken off pieces as we became more confident in the domain and found the
+right abstractions&lt;/li&gt;
+&lt;li&gt;Gathered data around where the real performance bottlenecks were, if that
+even became a problem&lt;/li&gt;
+&lt;li&gt;Saved a bunch of money by overlapping the supporting infrastructure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ignored advice #3: You still aren’t Google&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.3%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAA+ElEQVQoz2NgAALrjt9GvrUvkl/4Gqd93SSU6tR7v2FZul/rPj52eaC0DDczkxCQZgZiRiiNHxj0/mf0r37C8t+egWXnkmgOp9aPmnOKlrBqMDCwMDCysAOViAKxLhArALEiEHPjNMyi4x8DkUAKiHmhrlTAq9Jl/n8G64SNDKESXIwhLpKMan5dTFMz0hhawbKMMGWcQCwHxHpALA0VY2SgEIDCzw2II4CYlZBikG2qQKwG9RI222WgYegHdTFBwAXVxEMgLC2gbCZiDFUGYjYcPgABIyB2JCX8lKDJBBsQAGJtaJDIkBL4uGwXAWIhqA9UqRXTeAEAR3ElisUazx0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;You vs Google&quot;
+        title=&quot;You vs Google&quot;
+        src=&quot;/static/f087604f4ae0cac56404986e977d158a/b9e4f/notgoogle_2.png&quot;
+        srcset=&quot;/static/f087604f4ae0cac56404986e977d158a/cf440/notgoogle_2.png 148w,
+/static/f087604f4ae0cac56404986e977d158a/d2d38/notgoogle_2.png 295w,
+/static/f087604f4ae0cac56404986e977d158a/b9e4f/notgoogle_2.png 590w,
+/static/f087604f4ae0cac56404986e977d158a/f9b6a/notgoogle_2.png 885w,
+/static/f087604f4ae0cac56404986e977d158a/e11df/notgoogle_2.png 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Another benefit of microservices is the freedom to choose the best tool for the
+job. We were experimenting with languages, and were running services written in
+&lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;NodeJS&lt;/a&gt; and
+&lt;a href=&quot;https://golang.org&quot;&gt;Golang&lt;/a&gt;. This was great in general, but became a nightmare
+when writing shared libraries, since the same code had to be implemented in
+three different languages.&lt;/p&gt;
+&lt;p&gt;I do believe in experimenting with different tools, but we ended up treating
+everything as production-ready and long-lived. If you’re writing internal
+shared libraries, the services using them are no longer an experiment.&lt;/p&gt;
+&lt;p&gt;I’ve had to come to terms with settling down with a single language. It turns
+out that’s totally OK. Experiment as much as possible, but having a primary
+stack which is repeatable and consistent is valuable too. This is even more
+true if your services all operate under the same umbrella (e.g., web server
+with database connection).&lt;/p&gt;
+&lt;h2&gt;Ignored advice #4: Everything is a trade-off&lt;/h2&gt;
+&lt;p&gt;It turns out that a microservice architecture has a &lt;strong&gt;lot&lt;/strong&gt; of downsides. I
+won’t go into them here (others have &lt;a href=&quot;https://martinfowler.com/articles/microservice-trade-offs.html&quot;&gt;already done
+that&lt;/a&gt;), but I
+think it’s important to understand what you are signing up for.&lt;/p&gt;
+&lt;p&gt;If we had sat down and looked into the pros and cons, we would probably have
+found that it would only start being worth it as we grew into multiple backend
+teams, using different software to solve different problems.&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQoz51Ry0oDQRDcD/bq1aPf4MmP8CBBDCQmUbwpIXpzMYd1s4/Jzkz39Lx21k4UhCiCVkNTPdMFRXXmvR/+gsQ1DJLUzXqWGWP+IZ6vb0cvVxki8pRS6hkp7Ulistvbzx8Kxm4h9kzQ4kP5uDFVpqTEtuX3Togiz0Pfg2ih61hVVAUaZL1EyV2DFlIEH4w1FCmmmNVVpTclIBqtsanJedpuSSlrXaNaMMhfLQiyFgkb2YAG7goU+8pgb9sxEJJWUaneUkJkMpBNhokcAKJovZTeObZdNqXoBJOvwNiYK0uaT8J4FBdTfzeL07GfXNP9wj4t6TUP36I9TNu9FXh5oU9P4PgIzs/s8yqwtRg/kzsQ/3hnX1e0WvYx/H62dxPPBf8nugJTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The journey to net-positive value&quot;
+        title=&quot;The journey to
+net-positive value&quot;
+        src=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/b9e4f/value_graph.png&quot;
+        srcset=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/cf440/value_graph.png 148w,
+/static/b8b61f53c42a101608e1077011eaf5e9/d2d38/value_graph.png 295w,
+/static/b8b61f53c42a101608e1077011eaf5e9/b9e4f/value_graph.png 590w,
+/static/b8b61f53c42a101608e1077011eaf5e9/f9b6a/value_graph.png 885w,
+/static/b8b61f53c42a101608e1077011eaf5e9/2d849/value_graph.png 1180w,
+/static/b8b61f53c42a101608e1077011eaf5e9/d40c8/value_graph.png 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;The journey to
+net-positive value&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;The punishment&lt;/h2&gt;
+&lt;p&gt;We’ve spent time and effort going back the way we came. In January 2019, we
+took a step back and looked for the biggest knot in our architecture. We
+identified ten services which were coupled so tightly that bumping a single one
+would collapse them all like a house of cards. We have since merged all ten to
+be a single service, and haven’t looked back.&lt;/p&gt;
+&lt;p&gt;We’ve also slowly phased out our Python services, and all but one of our Golang
+services. In some cases this has meant literal rewrites into NodeJS. We’re left
+with a single set of shared JavaScript libraries to maintain.&lt;/p&gt;
+&lt;h2&gt;Learnings&lt;/h2&gt;
+&lt;p&gt;If I could go back in time and give myself some warnings, I would say the
+following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Design for the problems you know you have, and be very meticulous when
+guessing about the future.&lt;/li&gt;
+&lt;li&gt;It’s safer to start with a few larger services and carve them up as the
+boundaries reveal themselves. A good rule of thumb is that one microservice
+is better than two unless you can articulate the reason for splitting them.
+Of course, there &lt;em&gt;are&lt;/em&gt; many valid reasons, but make sure you know how they
+apply before going ahead.&lt;/li&gt;
+&lt;li&gt;When experimenting and building MVP services, be very clear about what you
+&lt;em&gt;won’t&lt;/em&gt; do and stick to that. It’s easy to get trapped into maintaining
+something which isn’t the right solution.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level of
 frustration has been enough to send me Googling for ways to change the default
@@ -60,6 +260,7 @@ let’s look at what the alt-tab switcher is supposed to do…&lt;/p&gt;
 /static/82db7eeb88a089f6f975392d936bea5a/2d849/super-a.png 1180w,
 /static/82db7eeb88a089f6f975392d936bea5a/90707/super-a.png 3842w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -97,6 +298,7 @@ mentally block out the animation to keep my mental model consistent.&lt;/p&gt;
 /static/6218d6bb3f77e6d89e399c1f5b93e30a/4efde/macos-minimize.jpg 1180w,
 /static/6218d6bb3f77e6d89e399c1f5b93e30a/13ead/macos-minimize.jpg 3360w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
@@ -161,6 +363,7 @@ tools&quot;
 /static/951c09807ba3a8aa3b5b3de5674d2a72/b9e4f/interest-graph.png 590w,
 /static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png 788w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -248,6 +451,7 @@ worker agents&quot;
 /static/84c9d6dbb258d44e5e675bf6b4faed58/2d849/heirarchy.png 1180w,
 /static/84c9d6dbb258d44e5e675bf6b4faed58/f5882/heirarchy.png 2822w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -302,6 +506,7 @@ elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&quot;
 /static/d5e6b27c6ec9ee29b871ba85f65e3063/f9b6a/elegant.png 885w,
 /static/d5e6b27c6ec9ee29b871ba85f65e3063/3b243/elegant.png 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -309,7 +514,7 @@ elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&quot;
 elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Let me digress a bit, and explain what I mean by “Desktop environment”. The
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Desktop_environment&quot;&gt;Wikipaedia article&lt;/a&gt; talks
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Desktop_environment&quot;&gt;Wikipedia article&lt;/a&gt; talks
 about the icon, window and toolbar metaphors (although you might not want to
 read too closely or you’ll find
 &lt;a href=&quot;https://en.wikipedia.org/wiki/WIMP_(computing)&quot;&gt;this&lt;/a&gt; page).&lt;/p&gt;
@@ -358,6 +563,7 @@ mention some thoughts on three that stood out to me.&lt;/p&gt;
 /static/2d082a8daaedfdde816cb8802f643284/b9e4f/slingshot.png 590w,
 /static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png 819w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -393,6 +599,7 @@ thing.&lt;/p&gt;
 /static/2e44f4e1825fc2452d87b97bd00a5e42/2d849/unity.png 1180w,
 /static/2e44f4e1825fc2452d87b97bd00a5e42/10ebc/unity.png 1497w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
