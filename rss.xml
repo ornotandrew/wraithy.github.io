@@ -1,29 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Apr 2020 16:22:31 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
-blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABJ0lEQVQY00VQ607CMBjtBkxxg7kZNRCD/jA+D7sAu4CCiok+h2u3dsMB4X09H4uSnDRft3Prxx4+9sDT1+Hx83C/3o/edhezwpjkZ5McZzsQrUB0QoEB0H2uB4RWwDUvY4NVPXzdjta7u/ftcFUPlrUR5szLNJ8Yl2lpJyU0mschtmIJI0YWgsSwAZWNv+n0ORtn4LV80QBid161A6rQCfPrl8qMFYaTGA3JckKBdqLcedkoKSqSV4uNfcxHI2ex6SellSi9qU3iae7MSytW3Znsx8pNScw8bqcVqEjuRcqM1O3yx0lLPEf7r60F3Jjmdqq6kezOCsTePFe6j91Q8vm0gJ2TVibpQaDCDU61e7HEbnE3ER7JvzdzHXs6GuEXZp22KBrgyy/swH7zgygQ0gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Banner&quot;
-        title=&quot;Banner&quot;
-        src=&quot;/static/bbc11fdad4c4320b474e14cd99a9c0c9/b9e4f/banner.png&quot;
-        srcset=&quot;/static/bbc11fdad4c4320b474e14cd99a9c0c9/cf440/banner.png 148w,
-/static/bbc11fdad4c4320b474e14cd99a9c0c9/d2d38/banner.png 295w,
-/static/bbc11fdad4c4320b474e14cd99a9c0c9/b9e4f/banner.png 590w,
-/static/bbc11fdad4c4320b474e14cd99a9c0c9/f9b6a/banner.png 885w,
-/static/bbc11fdad4c4320b474e14cd99a9c0c9/2d849/banner.png 1180w,
-/static/bbc11fdad4c4320b474e14cd99a9c0c9/77848/banner.png 3000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Apr 2020 10:13:36 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
+blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
 blank slate like this is a developer’s dream — no legacy code, no backward
 compatibility to worry about, and best of all, we could choose The Right
 Technology™ for the job.&lt;/p&gt;
@@ -45,7 +21,7 @@ inevitably, your system’s architecture will in some way resemble the
 organisational structure of your company.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -55,14 +31,12 @@ organisational structure of your company.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Conway’s law&quot;
         title=&quot;Conway’s law&quot;
-        src=&quot;/static/96005927a7675a35468d4e14b80d7208/b9e4f/conway.png&quot;
-        srcset=&quot;/static/96005927a7675a35468d4e14b80d7208/cf440/conway.png 148w,
-/static/96005927a7675a35468d4e14b80d7208/d2d38/conway.png 295w,
-/static/96005927a7675a35468d4e14b80d7208/b9e4f/conway.png 590w,
-/static/96005927a7675a35468d4e14b80d7208/f9b6a/conway.png 885w,
-/static/96005927a7675a35468d4e14b80d7208/2d849/conway.png 1180w,
+        src=&quot;/static/96005927a7675a35468d4e14b80d7208/e11df/conway.png&quot;
+        srcset=&quot;/static/96005927a7675a35468d4e14b80d7208/5039d/conway.png 250w,
+/static/96005927a7675a35468d4e14b80d7208/d19c0/conway.png 500w,
+/static/96005927a7675a35468d4e14b80d7208/e11df/conway.png 1000w,
 /static/96005927a7675a35468d4e14b80d7208/6ecc2/conway.png 1181w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -83,7 +57,7 @@ independently&lt;/a&gt; principle.&lt;/p&gt;
 &lt;h2&gt;Ignored advice #2: You aren’t Google&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -93,13 +67,11 @@ independently&lt;/a&gt; principle.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;You vs Google&quot;
         title=&quot;You vs Google&quot;
-        src=&quot;/static/f140b791d819236355eaa1387e173d1a/b9e4f/notgoogle_1.png&quot;
-        srcset=&quot;/static/f140b791d819236355eaa1387e173d1a/cf440/notgoogle_1.png 148w,
-/static/f140b791d819236355eaa1387e173d1a/d2d38/notgoogle_1.png 295w,
-/static/f140b791d819236355eaa1387e173d1a/b9e4f/notgoogle_1.png 590w,
-/static/f140b791d819236355eaa1387e173d1a/f9b6a/notgoogle_1.png 885w,
+        src=&quot;/static/f140b791d819236355eaa1387e173d1a/e11df/notgoogle_1.png&quot;
+        srcset=&quot;/static/f140b791d819236355eaa1387e173d1a/5039d/notgoogle_1.png 250w,
+/static/f140b791d819236355eaa1387e173d1a/d19c0/notgoogle_1.png 500w,
 /static/f140b791d819236355eaa1387e173d1a/e11df/notgoogle_1.png 1000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -127,7 +99,7 @@ even became a problem&lt;/li&gt;
 &lt;h2&gt;Ignored advice #3: You still aren’t Google&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -137,13 +109,11 @@ even became a problem&lt;/li&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;You vs Google&quot;
         title=&quot;You vs Google&quot;
-        src=&quot;/static/f087604f4ae0cac56404986e977d158a/b9e4f/notgoogle_2.png&quot;
-        srcset=&quot;/static/f087604f4ae0cac56404986e977d158a/cf440/notgoogle_2.png 148w,
-/static/f087604f4ae0cac56404986e977d158a/d2d38/notgoogle_2.png 295w,
-/static/f087604f4ae0cac56404986e977d158a/b9e4f/notgoogle_2.png 590w,
-/static/f087604f4ae0cac56404986e977d158a/f9b6a/notgoogle_2.png 885w,
+        src=&quot;/static/f087604f4ae0cac56404986e977d158a/e11df/notgoogle_2.png&quot;
+        srcset=&quot;/static/f087604f4ae0cac56404986e977d158a/5039d/notgoogle_2.png 250w,
+/static/f087604f4ae0cac56404986e977d158a/d19c0/notgoogle_2.png 500w,
 /static/f087604f4ae0cac56404986e977d158a/e11df/notgoogle_2.png 1000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -173,7 +143,7 @@ teams, using different software to solve different problems.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -184,14 +154,13 @@ teams, using different software to solve different problems.&lt;/p&gt;
         alt=&quot;The journey to net-positive value&quot;
         title=&quot;The journey to
 net-positive value&quot;
-        src=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/b9e4f/value_graph.png&quot;
-        srcset=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/cf440/value_graph.png 148w,
-/static/b8b61f53c42a101608e1077011eaf5e9/d2d38/value_graph.png 295w,
-/static/b8b61f53c42a101608e1077011eaf5e9/b9e4f/value_graph.png 590w,
-/static/b8b61f53c42a101608e1077011eaf5e9/f9b6a/value_graph.png 885w,
-/static/b8b61f53c42a101608e1077011eaf5e9/2d849/value_graph.png 1180w,
+        src=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/e11df/value_graph.png&quot;
+        srcset=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/5039d/value_graph.png 250w,
+/static/b8b61f53c42a101608e1077011eaf5e9/d19c0/value_graph.png 500w,
+/static/b8b61f53c42a101608e1077011eaf5e9/e11df/value_graph.png 1000w,
+/static/b8b61f53c42a101608e1077011eaf5e9/8e846/value_graph.png 1500w,
 /static/b8b61f53c42a101608e1077011eaf5e9/d40c8/value_graph.png 2000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -223,31 +192,7 @@ apply before going ahead.&lt;/li&gt;
 &lt;em&gt;won’t&lt;/em&gt; do and stick to that. It’s easy to get trapped into maintaining
 something which isn’t the right solution.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
-great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 12.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAdUlEQVQI12OwmPQAGVlOehC88Eng/MeWYK75pAfWkx+ELXqas/5F6KInphMfWCIpZkDWaTbxgd3Uh2WbX6avee484yGQC0ROMx6WbXlVsvll+OKnphPu49QMQf7zHvvOfWwOdgVI8/SHlVtfZax94TH7MZrNAPROZ/s2J7HNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Banner&quot;
-        title=&quot;Banner&quot;
-        src=&quot;/static/7f08ffcc657c5d0687a9801aae19ea4b/b9e4f/banner.png&quot;
-        srcset=&quot;/static/7f08ffcc657c5d0687a9801aae19ea4b/cf440/banner.png 148w,
-/static/7f08ffcc657c5d0687a9801aae19ea4b/d2d38/banner.png 295w,
-/static/7f08ffcc657c5d0687a9801aae19ea4b/b9e4f/banner.png 590w,
-/static/7f08ffcc657c5d0687a9801aae19ea4b/f9b6a/banner.png 885w,
-/static/7f08ffcc657c5d0687a9801aae19ea4b/2d849/banner.png 1180w,
-/static/7f08ffcc657c5d0687a9801aae19ea4b/d40c8/banner.png 2000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
+great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level of
 frustration has been enough to send me Googling for ways to change the default
 behaviour, but not enough to do anything constructive about it. I suppose this
@@ -290,7 +235,7 @@ let’s look at what the alt-tab switcher is supposed to do…&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -300,14 +245,14 @@ let’s look at what the alt-tab switcher is supposed to do…&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Window overview via super+a&quot;
         title=&quot;Window overview via super+a&quot;
-        src=&quot;/static/82db7eeb88a089f6f975392d936bea5a/b9e4f/super-a.png&quot;
-        srcset=&quot;/static/82db7eeb88a089f6f975392d936bea5a/cf440/super-a.png 148w,
-/static/82db7eeb88a089f6f975392d936bea5a/d2d38/super-a.png 295w,
-/static/82db7eeb88a089f6f975392d936bea5a/b9e4f/super-a.png 590w,
-/static/82db7eeb88a089f6f975392d936bea5a/f9b6a/super-a.png 885w,
-/static/82db7eeb88a089f6f975392d936bea5a/2d849/super-a.png 1180w,
+        src=&quot;/static/82db7eeb88a089f6f975392d936bea5a/e11df/super-a.png&quot;
+        srcset=&quot;/static/82db7eeb88a089f6f975392d936bea5a/5039d/super-a.png 250w,
+/static/82db7eeb88a089f6f975392d936bea5a/d19c0/super-a.png 500w,
+/static/82db7eeb88a089f6f975392d936bea5a/e11df/super-a.png 1000w,
+/static/82db7eeb88a089f6f975392d936bea5a/8e846/super-a.png 1500w,
+/static/82db7eeb88a089f6f975392d936bea5a/d40c8/super-a.png 2000w,
 /static/82db7eeb88a089f6f975392d936bea5a/90707/super-a.png 3842w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -328,7 +273,7 @@ screen) as you cycle. I don’t want to have to do extra work by trying to
 mentally block out the animation to keep my mental model consistent.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -338,14 +283,14 @@ mentally block out the animation to keep my mental model consistent.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Minimize on MacOS&quot;
         title=&quot;Minimize on MacOS&quot;
-        src=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/c739e/macos-minimize.jpg&quot;
-        srcset=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/8ee9c/macos-minimize.jpg 148w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/ebbe7/macos-minimize.jpg 295w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/c739e/macos-minimize.jpg 590w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/5413e/macos-minimize.jpg 885w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/4efde/macos-minimize.jpg 1180w,
+        src=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/971c4/macos-minimize.jpg&quot;
+        srcset=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/9fb78/macos-minimize.jpg 250w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/48a11/macos-minimize.jpg 500w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/971c4/macos-minimize.jpg 1000w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/45751/macos-minimize.jpg 1500w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/4aca8/macos-minimize.jpg 2000w,
 /static/6218d6bb3f77e6d89e399c1f5b93e30a/13ead/macos-minimize.jpg 3360w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -394,7 +339,7 @@ better than) any other CI tool I’m aware of.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 788px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -405,12 +350,11 @@ better than) any other CI tool I’m aware of.&lt;/p&gt;
         alt=&quot;CI tool comparison&quot;
         title=&quot;Google searches for popular CI
 tools&quot;
-        src=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/b9e4f/interest-graph.png&quot;
-        srcset=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/cf440/interest-graph.png 148w,
-/static/951c09807ba3a8aa3b5b3de5674d2a72/d2d38/interest-graph.png 295w,
-/static/951c09807ba3a8aa3b5b3de5674d2a72/b9e4f/interest-graph.png 590w,
+        src=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png&quot;
+        srcset=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/5039d/interest-graph.png 250w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/d19c0/interest-graph.png 500w,
 /static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png 788w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 788px) 100vw, 788px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -442,7 +386,7 @@ agents&lt;/a&gt;.&lt;/p&gt;
 The server will only give a job to an agent if that agent also has those tags.
 Here’s an animation to demonstrate.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/7981666968d52e0e6feeeb6e9d444e15/delegation.gif&quot; alt=&quot;Delegation animation&quot; title=&quot;A master/worker CI system with two
-different types of workers&quot;&gt;&lt;/p&gt;
+        different types of workers&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The white block in the lower right is the server node. The blue and purple
 blocks are agents with two different tags.&lt;/p&gt;
 &lt;p&gt;During a recent refactor of our CI system, I took the opportunity to redefine
@@ -480,7 +424,7 @@ types build off.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -491,14 +435,14 @@ types build off.&lt;/p&gt;
         alt=&quot;Separation of concern&quot;
         title=&quot;Separation of concern for Docker-based
 worker agents&quot;
-        src=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/b9e4f/heirarchy.png&quot;
-        srcset=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/cf440/heirarchy.png 148w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/d2d38/heirarchy.png 295w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/b9e4f/heirarchy.png 590w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/f9b6a/heirarchy.png 885w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/2d849/heirarchy.png 1180w,
+        src=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/e11df/heirarchy.png&quot;
+        srcset=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/5039d/heirarchy.png 250w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/d19c0/heirarchy.png 500w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/e11df/heirarchy.png 1000w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/8e846/heirarchy.png 1500w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/d40c8/heirarchy.png 2000w,
 /static/84c9d6dbb258d44e5e675bf6b4faed58/f5882/heirarchy.png 2822w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -536,7 +480,7 @@ for the default option, even when there are alternatives.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -547,13 +491,12 @@ for the default option, even when there are alternatives.&lt;/p&gt;
         alt=&quot;Elegant desktop&quot;
         title=&quot;Desktops can be both functional and
 elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&quot;
-        src=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/b9e4f/elegant.png&quot;
-        srcset=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/cf440/elegant.png 148w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/d2d38/elegant.png 295w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/b9e4f/elegant.png 590w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/f9b6a/elegant.png 885w,
+        src=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/e11df/elegant.png&quot;
+        srcset=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/5039d/elegant.png 250w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/d19c0/elegant.png 500w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/e11df/elegant.png 1000w,
 /static/d5e6b27c6ec9ee29b871ba85f65e3063/3b243/elegant.png 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -595,7 +538,7 @@ mention some thoughts on three that stood out to me.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 819px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -605,12 +548,11 @@ mention some thoughts on three that stood out to me.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;*Slingshot launcher*&quot;
         title=&quot;Slingshot launcher&quot;
-        src=&quot;/static/2d082a8daaedfdde816cb8802f643284/b9e4f/slingshot.png&quot;
-        srcset=&quot;/static/2d082a8daaedfdde816cb8802f643284/cf440/slingshot.png 148w,
-/static/2d082a8daaedfdde816cb8802f643284/d2d38/slingshot.png 295w,
-/static/2d082a8daaedfdde816cb8802f643284/b9e4f/slingshot.png 590w,
+        src=&quot;/static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png&quot;
+        srcset=&quot;/static/2d082a8daaedfdde816cb8802f643284/5039d/slingshot.png 250w,
+/static/2d082a8daaedfdde816cb8802f643284/d19c0/slingshot.png 500w,
 /static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png 819w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 819px) 100vw, 819px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -629,7 +571,7 @@ thing.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -639,14 +581,12 @@ thing.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Unity&quot;
         title=&quot;Unity&quot;
-        src=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/b9e4f/unity.png&quot;
-        srcset=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/cf440/unity.png 148w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/d2d38/unity.png 295w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/b9e4f/unity.png 590w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/f9b6a/unity.png 885w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/2d849/unity.png 1180w,
+        src=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/e11df/unity.png&quot;
+        srcset=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/5039d/unity.png 250w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/d19c0/unity.png 500w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/e11df/unity.png 1000w,
 /static/2e44f4e1825fc2452d87b97bd00a5e42/10ebc/unity.png 1497w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
