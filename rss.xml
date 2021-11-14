@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Not A Blog]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Apr 2020 12:02:10 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Andrew van Rooyen blog]]></description><link>https://andrewvr.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 14 Nov 2021 15:39:04 GMT</lastBuildDate><item><title><![CDATA[Learning the hard way: Microservices]]></title><description><![CDATA[In late 2016, my team and I started building a brand new platform. Having a
 blank slate like this is a developer’s dream — no legacy code…]]></description><link>https://andrewvr.dev/learning-the-hard-way-microservices/</link><guid isPermaLink="false">https://andrewvr.dev/learning-the-hard-way-microservices/</guid><pubDate>Mon, 02 Sep 2019 18:51:31 GMT</pubDate><content:encoded>&lt;p&gt;In late 2016, my team and I started building a brand new platform. Having a
 blank slate like this is a developer’s dream — no legacy code, no backward
 compatibility to worry about, and best of all, we could choose The Right
@@ -6,8 +6,12 @@ Technology™ for the job.&lt;/p&gt;
 &lt;p&gt;Three years later, after much pain and suffering, I’m here to do a bit of a
 retrospective. Before diving in though, I’m going to acknowledge two things.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Hindsight is 20/20&lt;/li&gt;
-&lt;li&gt;There is no silver bullet&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hindsight is 20/20&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There is no silver bullet&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There’s no way of knowing if doing things differently would have resulted in
 less frustration, but there were definitely some key pieces of &lt;em&gt;very important&lt;/em&gt;
@@ -21,24 +25,25 @@ inevitably, your system’s architecture will in some way resemble the
 organisational structure of your company.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 30.73666384419983%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAmElEQVQY042QwQrCQAxEsyq1tVXUVm314kHx6K0g6MH//6lO4BXXIurAgyXZnUzW7KVcbOxd4QOxZuIgtsNHrrs4iZH9rwVmjRjHjTlmpVhS80sX6s5ZHMVNXLmzEgXGeW9WDCK7aSomIuOcck7EmqFe20fvavr2YEIgtiepfqzqw3b8+RQaatZi2Kd90ghfDBPMakJkbFZ2xgQFkv6YwawAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 30.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAkklEQVQY05XQywrCQBBE0eMTFeMj0agIIiKo4MaNW3Hj/3+SDDQasjDYMNBTQ9+qab5VYOm/mqDEAq364wt7dBogfXSjn2KNDdpq6ZLLGHloO1xwinPGAU9cK3M9jGL2I+Y1+LAhYYLMsKroWwxS80AWYgLdIu2vGsW+yzDI4p6+71iJm3Zyx7wB2AvTshIkAYs3u4sFYVaJkIkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Conway’s law&quot;
         title=&quot;Conway’s law&quot;
-        src=&quot;/static/96005927a7675a35468d4e14b80d7208/e11df/conway.png&quot;
-        srcset=&quot;/static/96005927a7675a35468d4e14b80d7208/5039d/conway.png 250w,
-/static/96005927a7675a35468d4e14b80d7208/d19c0/conway.png 500w,
-/static/96005927a7675a35468d4e14b80d7208/e11df/conway.png 1000w,
-/static/96005927a7675a35468d4e14b80d7208/6ecc2/conway.png 1181w&quot;
+        src=&quot;/static/96005927a7675a35468d4e14b80d7208/00d43/conway.png&quot;
+        srcset=&quot;/static/96005927a7675a35468d4e14b80d7208/63868/conway.png 250w,
+/static/96005927a7675a35468d4e14b80d7208/0b533/conway.png 500w,
+/static/96005927a7675a35468d4e14b80d7208/00d43/conway.png 1000w,
+/static/96005927a7675a35468d4e14b80d7208/712f7/conway.png 1181w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;As our platform has evolved, we’ve written and operated between 30 and 40
@@ -57,23 +62,24 @@ independently&lt;/a&gt; principle.&lt;/p&gt;
 &lt;h2&gt;Ignored advice #2: You aren’t Google&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.3%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABAUlEQVQoz2NgAALHli+MINqh7aucU8vn+MNB8Wn/ZzEmRc7fW9ZYWDPxvyqXEVBaXIiVRRxIswIxBwMhEF91CUzbtX1n+2KpyfJ/GQOLW8cblaiqa4JgCU5RFiCpBcQ6QKwAxCI4DXPo+MKg1vefwaT9P3YFa+Di7EAsAWWr4DSQW0wLTHOJqjPwy1sydptYMvzfwsDg2f2IMa1iA8N8hFJQ0CgBMSgIeBgoBIxQ2hyIM4nVxAX1CgsOeZB3jUGhBMSqaBZhBaAwkgNiJhzyIG/KQ13JjkcdCgDZzInHy4ZA7ERKWIG8LIZDTgCItaHJRoacCEAHoLQnBMRsxIYhxQAArKUs0mG8a8QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQoz52STUsCURSGn+uYYJYRRZL4sdAojD60pVCOuYg+qGhnLSLKVVDRx6JNFGOC7lpWMNCPCIqgfkIt+x2jqxY3lDvQQqepd3MPnHOfc897LgC6URfZyhe560Yib1i7bxs72/JWFIsPj6WL49OaHAlOAX2pHr8fN8obFumaJFepa7rRCL8vr0flPbHVm8/5syNzRvYTAF/QA2lgDEgAvY7ATLUFRDcafCytIe+8bJmvlPfLyPEuuzQARFSc6AiMz50Q1s+JzR6SXKx6ngsLQpqa2DRfxOXBlXgaFiS1VmmTHFfQIf4j3bDs0KPOaWBPxeK3+z4gBGgd8kEgC6wAUTfQpkejgLdDPqRAGWDAzQtR/rQD2iM3v1DBDcjuNulgeDcwAaSAwb/swucwckSBU24X4yTtB6Rt02863z++XpFICQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;You vs Google&quot;
         title=&quot;You vs Google&quot;
-        src=&quot;/static/f140b791d819236355eaa1387e173d1a/e11df/notgoogle_1.png&quot;
-        srcset=&quot;/static/f140b791d819236355eaa1387e173d1a/5039d/notgoogle_1.png 250w,
-/static/f140b791d819236355eaa1387e173d1a/d19c0/notgoogle_1.png 500w,
-/static/f140b791d819236355eaa1387e173d1a/e11df/notgoogle_1.png 1000w&quot;
+        src=&quot;/static/f140b791d819236355eaa1387e173d1a/00d43/notgoogle_1.png&quot;
+        srcset=&quot;/static/f140b791d819236355eaa1387e173d1a/63868/notgoogle_1.png 250w,
+/static/f140b791d819236355eaa1387e173d1a/0b533/notgoogle_1.png 500w,
+/static/f140b791d819236355eaa1387e173d1a/00d43/notgoogle_1.png 1000w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;One of the lesser benefits of microservices is that they can scale
@@ -90,32 +96,39 @@ actual application. By a large amount.&lt;/p&gt;
 &lt;p&gt;Now, I’m not saying we’d be better off with a monolith, but if we had started
 with a simpler architecture, we could have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Broken off pieces as we became more confident in the domain and found the
-right abstractions&lt;/li&gt;
-&lt;li&gt;Gathered data around where the real performance bottlenecks were, if that
-even became a problem&lt;/li&gt;
-&lt;li&gt;Saved a bunch of money by overlapping the supporting infrastructure&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Broken off pieces as we became more confident in the domain and found the
+right abstractions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gathered data around where the real performance bottlenecks were, if that
+even became a problem&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Saved a bunch of money by overlapping the supporting infrastructure&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Ignored advice #3: You still aren’t Google&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.3%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAA+ElEQVQoz2NgAALrjt9GvrUvkl/4Gqd93SSU6tR7v2FZul/rPj52eaC0DDczkxCQZgZiRiiNHxj0/mf0r37C8t+egWXnkmgOp9aPmnOKlrBqMDCwMDCysAOViAKxLhArALEiEHPjNMyi4x8DkUAKiHmhrlTAq9Jl/n8G64SNDKESXIwhLpKMan5dTFMz0hhawbKMMGWcQCwHxHpALA0VY2SgEIDCzw2II4CYlZBikG2qQKwG9RI222WgYegHdTFBwAXVxEMgLC2gbCZiDFUGYjYcPgABIyB2JCX8lKDJBBsQAGJtaJDIkBL4uGwXAWIhqA9UqRXTeAEAR3ElisUazx0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKklEQVQoz2Owav/DYNP+09K77mX6C1/juB+bBGIc+27lLsjybbnNzSHJwMAgJMrGwslALDDt/M9g3vWfy7/mqeQHb225J+vUlJ06XnuvTY1XLmVn4AUZyMTAIMvAwKDOwMAgzcDAIMfAwMCC10CLzn8MfjVPGV77GjB83STI4NT9iGFzSjBDJS9EHxNEqQLIcAYGBg4oGzuw6v3PYNPzn8Gr4h5jl44004RMLiatiF6mFelBjLWcYKMYoUr5oC4EYXGoGCMDhQDkOi8GBgZPYjXIQF0gikMe5DJtBgaGSAYGcPjiBYxQDSoMDAwSONSwMzAwiDAwMJiT4mUpHOLQuGEwYGBgcCLGIJht2ni8zMXAwKADVSNCSuCz4QlDGajBWtSIaWYkQ7BaCgBSPDbVNyRmNwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;You vs Google&quot;
         title=&quot;You vs Google&quot;
-        src=&quot;/static/f087604f4ae0cac56404986e977d158a/e11df/notgoogle_2.png&quot;
-        srcset=&quot;/static/f087604f4ae0cac56404986e977d158a/5039d/notgoogle_2.png 250w,
-/static/f087604f4ae0cac56404986e977d158a/d19c0/notgoogle_2.png 500w,
-/static/f087604f4ae0cac56404986e977d158a/e11df/notgoogle_2.png 1000w&quot;
+        src=&quot;/static/f087604f4ae0cac56404986e977d158a/00d43/notgoogle_2.png&quot;
+        srcset=&quot;/static/f087604f4ae0cac56404986e977d158a/63868/notgoogle_2.png 250w,
+/static/f087604f4ae0cac56404986e977d158a/0b533/notgoogle_2.png 500w,
+/static/f087604f4ae0cac56404986e977d158a/00d43/notgoogle_2.png 1000w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Another benefit of microservices is the freedom to choose the best tool for the
@@ -143,30 +156,31 @@ teams, using different software to solve different problems.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 43.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQoz51Ry0oDQRDcD/bq1aPf4MmP8CBBDCQmUbwpIXpzMYd1s4/Jzkz39Lx21k4UhCiCVkNTPdMFRXXmvR/+gsQ1DJLUzXqWGWP+IZ6vb0cvVxki8pRS6hkp7Ulistvbzx8Kxm4h9kzQ4kP5uDFVpqTEtuX3Togiz0Pfg2ih61hVVAUaZL1EyV2DFlIEH4w1FCmmmNVVpTclIBqtsanJedpuSSlrXaNaMMhfLQiyFgkb2YAG7goU+8pgb9sxEJJWUaneUkJkMpBNhokcAKJovZTeObZdNqXoBJOvwNiYK0uaT8J4FBdTfzeL07GfXNP9wj4t6TUP36I9TNu9FXh5oU9P4PgIzs/s8yqwtRg/kzsQ/3hnX1e0WvYx/H62dxPPBf8nugJTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 43.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABI0lEQVQoz5WRu0pDYRCEzxNb2lr6Cla+g42SIkJiEoKVRmKZoOIhJ+eS/Jfd/7q7YhIURYRMNTswsHxTxBjleBlv7l5HBSIeVWNhEZm8TW8WvQIAWISZiYiYd4aJd9nu3jdEhHYSEfT4sHqsoCq0UtC2RLTtunK5SES2a+12yyzlugQEZlagmNlY06kuxYQeffaZc1Gv16ZaAQAaY+vaheg2G6eV96HRjUUAxNZ2zntw0KjGGtuoRoNm4sPbIYQAwEZnrck7Rshai/P0aZRYm7o2KhVDEJGqqdpNKyLfwJg5VCs3HqbbXh4P0nSUh/046Lv7SXh+ci/LhPAFbU/hN+1QvuP1lT0/s6cncHnh5rNkDaV0IPdTxZ87x7p28xnl9P9sHy//BhHBX8K1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The journey to net-positive value&quot;
-        title=&quot;The journey to
-net-positive value&quot;
-        src=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/e11df/value_graph.png&quot;
-        srcset=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/5039d/value_graph.png 250w,
-/static/b8b61f53c42a101608e1077011eaf5e9/d19c0/value_graph.png 500w,
-/static/b8b61f53c42a101608e1077011eaf5e9/e11df/value_graph.png 1000w,
-/static/b8b61f53c42a101608e1077011eaf5e9/8e846/value_graph.png 1500w,
-/static/b8b61f53c42a101608e1077011eaf5e9/d40c8/value_graph.png 2000w&quot;
+        title=&quot;_The journey to
+net-positive value_&quot;
+        src=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/00d43/value_graph.png&quot;
+        srcset=&quot;/static/b8b61f53c42a101608e1077011eaf5e9/63868/value_graph.png 250w,
+/static/b8b61f53c42a101608e1077011eaf5e9/0b533/value_graph.png 500w,
+/static/b8b61f53c42a101608e1077011eaf5e9/00d43/value_graph.png 1000w,
+/static/b8b61f53c42a101608e1077011eaf5e9/aa440/value_graph.png 1500w,
+/static/b8b61f53c42a101608e1077011eaf5e9/e8950/value_graph.png 2000w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;The journey to
-net-positive value&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;The journey to
+net-positive value&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;The punishment&lt;/h2&gt;
 &lt;p&gt;We’ve spent time and effort going back the way we came. In January 2019, we
@@ -181,16 +195,22 @@ with a single set of shared JavaScript libraries to maintain.&lt;/p&gt;
 &lt;p&gt;If I could go back in time and give myself some warnings, I would say the
 following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Design for the problems you know you have, and be very meticulous when
-guessing about the future.&lt;/li&gt;
-&lt;li&gt;It’s safer to start with a few larger services and carve them up as the
+&lt;li&gt;
+&lt;p&gt;Design for the problems you know you have, and be very meticulous when
+guessing about the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It’s safer to start with a few larger services and carve them up as the
 boundaries reveal themselves. A good rule of thumb is that one microservice
 is better than two unless you can articulate the reason for splitting them.
 Of course, there &lt;em&gt;are&lt;/em&gt; many valid reasons, but make sure you know how they
-apply before going ahead.&lt;/li&gt;
-&lt;li&gt;When experimenting and building MVP services, be very clear about what you
+apply before going ahead.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When experimenting and building MVP services, be very clear about what you
 &lt;em&gt;won’t&lt;/em&gt; do and stick to that. It’s easy to get trapped into maintaining
-something which isn’t the right solution.&lt;/li&gt;
+something which isn’t the right solution.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A rant about alt+tab in elementary OS]]></title><description><![CDATA[Disclaimer: I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level…]]></description><link>https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</link><guid isPermaLink="false">https://andrewvr.dev/a-rant-about-alt-tab-in-elementary-os/</guid><pubDate>Thu, 29 Jun 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; I have been using elementary OS for a while now. It’s mostly
 great, but the alt+tab functionality gets under my skin. My level of
@@ -211,7 +231,7 @@ of elementary OS. It frustrates me &lt;em&gt;literally&lt;/em&gt; every time I u
 that from a UX standpoint, it breaks continuity in more than one big way.&lt;/p&gt;
 &lt;p&gt;For reference, below is a short video of me switching through a typical set of
 open windows.&lt;/p&gt;
-&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://www.youtube.com/embed/ta7itUYlLvk&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://www.youtube.com/embed/ta7itUYlLvk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
 &lt;h2&gt;The dock in general&lt;/h2&gt;
 &lt;p&gt;I appreciate the idea of overloading the dock, and I think it could work, but
 It needs more design. Plank only shows you the currently open apps while
@@ -235,29 +255,30 @@ let’s look at what the alt-tab switcher is supposed to do…&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.188443519000522%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAABeUlEQVQY0wFuAZH+AEtUZkpRYEdPX01TX5eBa7++vsnJycvMzcfCv5OAZ3FqWntqVeCweOW5h8WlgbuTbOGsb+C1dsuidrmWbwArO1kzQV0rOlcjM05TVFLv8/f////8/v////aihGceIygkKCxeU0J/alJUTEJ1cnPMuavp2cDn1MHgy7gALzxRND9OPEhaQEteR09Vzs/Qy83NxMfI1s3DknZaDQ4QGBcWDA4RBwsPEBIUOEZYusTQ+v//7fX88fDvABYfJRUgJI2SlOfl5djX2dPX22Rqazk+PjI3OSgqKhcXGBkaGhsbGxsaGRscHDI2PsHAwv///////unp6AANFiAACxWZn6L////7+/v///9YYGULFR0KExsFDBQOFRkQGB8UHiUVICYXIykfKzNBS1FLU1pDS1E4PkQACxQcBQ8YP0hPcnZ6b29xb3d9JzE5BxEaBw0UAgcOBg8XChQcChUeDRkiER4oEh8oCxghBREaAQkRAAEI96yTQ+sose0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 27.999999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVQY0wFuAZH+AExUZUtSX0VPYFxbXqWQecLFyMfGxsvNz760q4l3Xm1nWZN5W+q4fuG2iLuefMaYa+Kxcd2yd8aedLWUbgAtPFozQV0oOVckMEVzdHH////+/fv9////8995Y0saIikuMDBuXkl9Z1FQTEaLhIPXw7Dq2b/l0sHfxawAMD1RNUBPQExfOURUYmhr3N3eyMnIxsrN2cm3a1U/Cw0PFxYWCg0RBwoNFxofTFtw2ODm9fr+7/n/7eLXABgiKB4pLbK1td7c3dnZ28DFylFWVjo/QDM4OSUmJRcXFxoaGhsbGxoZGBwfIEVJUeHg4f///v///8TDwgAMFR8LFyDLztD////////p6usyPUMNFx4GDxgHDhUOFhoSGiEUHiUWISYXIyokMDhHUVdIUFdES1EsMjkACxQcCRMcU1ticnN2cXN2ZG1zFyIrCBIaBQsRAwgPBxEZChQdChUeDhojEh8pER4nCRYfBBAZAAcPAAEHHuuUYI+9Z/4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Window overview via super+a&quot;
-        title=&quot;Window overview via super+a&quot;
-        src=&quot;/static/82db7eeb88a089f6f975392d936bea5a/e11df/super-a.png&quot;
-        srcset=&quot;/static/82db7eeb88a089f6f975392d936bea5a/5039d/super-a.png 250w,
-/static/82db7eeb88a089f6f975392d936bea5a/d19c0/super-a.png 500w,
-/static/82db7eeb88a089f6f975392d936bea5a/e11df/super-a.png 1000w,
-/static/82db7eeb88a089f6f975392d936bea5a/8e846/super-a.png 1500w,
-/static/82db7eeb88a089f6f975392d936bea5a/d40c8/super-a.png 2000w,
-/static/82db7eeb88a089f6f975392d936bea5a/90707/super-a.png 3842w&quot;
+        title=&quot;_Window overview via super+a_&quot;
+        src=&quot;/static/82db7eeb88a089f6f975392d936bea5a/00d43/super-a.png&quot;
+        srcset=&quot;/static/82db7eeb88a089f6f975392d936bea5a/63868/super-a.png 250w,
+/static/82db7eeb88a089f6f975392d936bea5a/0b533/super-a.png 500w,
+/static/82db7eeb88a089f6f975392d936bea5a/00d43/super-a.png 1000w,
+/static/82db7eeb88a089f6f975392d936bea5a/aa440/super-a.png 1500w,
+/static/82db7eeb88a089f6f975392d936bea5a/e8950/super-a.png 2000w,
+/static/82db7eeb88a089f6f975392d936bea5a/21f0c/super-a.png 3842w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Window overview via super+a&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Window overview via super+a&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;In my opinion, alt+tab should be a quicker version of the window
 overview/expose/super+a. I should be able to get a quick, general overview of
@@ -273,26 +294,27 @@ screen) as you cycle. I don’t want to have to do extra work by trying to
 mentally block out the animation to keep my mental model consistent.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZf426LFRf/EABkQAAIDAQAAAAAAAAAAAAAAAAECAAMQEv/aAAgBAQABBQKizmOyjFlbkZ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAcEAABAwUAAAAAAAAAAAAAAAABAAIQETFBUWH/2gAIAQEABj8Co6yGnZnhEf/EABsQAQACAgMAAAAAAAAAAAAAAAEAESFBEDFR/9oACAEBAAE/IRxFW76hGxIB3LfWZRtByLOP/9oADAMBAAIAAwAAABD87//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQACAwADAAAAAAAAAAAAAAEAESFRYTFxwf/aAAgBAQABPxCze1gQr6SmC+ZQq0McercDTNTyjkcj332LP//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 62.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAaMk+qc5Av8A/8QAGBABAQEBAQAAAAAAAAAAAAAAAQIAAxL/2gAIAQEAAQUC434WxNO5qVv/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAABBQEAAAAAAAAAAAAAAAABABARITEC/9oACAEBAAY/AskIHkSMNY9N/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAERIRAx/9oACAEBAAE/IW2hnqYquzFaDNCTUtXP/9oADAMBAAIAAwAAABBf7//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABoQAQEBAAMBAAAAAAAAAAAAAAERADFBYYH/2gAIAQEAAT8QR9EK/T3KofkAjF8wLhUuXFg3pOHLd//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Minimize on MacOS&quot;
         title=&quot;Minimize on MacOS&quot;
-        src=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/971c4/macos-minimize.jpg&quot;
-        srcset=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/9fb78/macos-minimize.jpg 250w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/48a11/macos-minimize.jpg 500w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/971c4/macos-minimize.jpg 1000w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/45751/macos-minimize.jpg 1500w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/4aca8/macos-minimize.jpg 2000w,
-/static/6218d6bb3f77e6d89e399c1f5b93e30a/13ead/macos-minimize.jpg 3360w&quot;
+        src=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/a2510/macos-minimize.jpg&quot;
+        srcset=&quot;/static/6218d6bb3f77e6d89e399c1f5b93e30a/0479a/macos-minimize.jpg 250w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/41099/macos-minimize.jpg 500w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/a2510/macos-minimize.jpg 1000w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/c58a3/macos-minimize.jpg 1500w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/3acf0/macos-minimize.jpg 2000w,
+/static/6218d6bb3f77e6d89e399c1f5b93e30a/1b92a/macos-minimize.jpg 3360w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I know it’s for a different operation, but a good example of how to to this
@@ -309,12 +331,24 @@ actual value, and just adds more cognitive load.&lt;/p&gt;
 Pick one and move on from there.&lt;/p&gt;
 &lt;p&gt;I primarily use two screens. It takes mental load to go through the cycle:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;hit alt+tab&lt;/li&gt;
-&lt;li&gt;get confused&lt;/li&gt;
-&lt;li&gt;lose my train of thought while trying to grok my screen&lt;/li&gt;
-&lt;li&gt;remember how it works&lt;/li&gt;
-&lt;li&gt;move away from where I was working to look at the bottom of the main screen&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hit alt+tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get confused&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lose my train of thought while trying to grok my screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remember how it works&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;move away from where I was working to look at the bottom of the main screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;etc.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Smaller things&lt;/h2&gt;
 &lt;p&gt;As far as I know, there’s no equivalent of alt+` from other desktops. It would
@@ -325,8 +359,12 @@ etc. Not a deal-breaker though.&lt;/p&gt;
 &lt;h2&gt;P.S.&lt;/h2&gt;
 &lt;p&gt;Here are some resources if anyone is interested.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tom95/gala-alternate-alt-tab&quot;&gt;https://github.com/tom95/gala-alternate-alt-tab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&quot;&gt;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tom95/gala-alternate-alt-tab&quot;&gt;https://github.com/tom95/gala-alternate-alt-tab&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&quot;&gt;https://code.launchpad.net/~gala-dev/gala/no-depth-alt-tab&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Both of these were last updated two years ago. I didn’t try either, so if
 anyone has had a positive experience with them in Loki I’d be interested to
@@ -339,28 +377,29 @@ better than) any other CI tool I’m aware of.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 788px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 788px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.38578680203045%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAABeklEQVQoz32SW3ObMBCF/f//WN7aTKbjaSYhBYMBY6MLqwtaSbvFuHab1u4ZiYeVvtnD0W6YOWAahRrFaA2gs2BMTpjQAZiYop2tcy6HbMECADOt66wN3xPR/fIvLM0c7UP4gVZywfQ7IzyElYn/gHnBaJYENSdP/7E9SOTbn12UkXTB6jvjdHOxsdamlD47424MCuIfJWIKNH34OcxIvUS9Wtt473POf3UWE1b9cvNcT8Szg2NXi1FJk4SKUFazlA9tO2Rl0yBjN8ah3XVNYz1NPpvO6ucavu2yC1d4eZnbWmUkcESmFKYu2HHNK9vygPUBJz04ESLe75yNho8i9k0snvJQkDxkLWBbJmECh94PkSJdAls2gphev/i6MkMTjnvX79VRoG5QNgjGC6WrkxFWxUl4EVK4DcsZPvVt/bp9//pSFdvq7WVflvWPYle+tW0/DMdm37an7qAPJzUu6Vpznlaia+dL2pl+Dyath/RZy7Xlu7wrXaP5CcDe9OyxBCE5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 67.19999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABh0lEQVQoz32S227bMAyG+/4PNgzFMPSmK7Am9Rw7cS0fZUm2SPEwxJ63tWv2QyAokZ8ogrpT1XmBvLiUZdEYs9jBOU8JGL21EyT00XvvOXKYgrVWRHTXnf4j2eO/8zZHZI8IKS2/YHkr/b+E1J90aT+urKoh0geXMF6XP8vSyq1nq2o9IL+jhcQVOjzp0mz7KwwARPQnZ7VmQBvS2tFf/HSgaJm49zzNfIW994j4Du5dyqqFWLYTEZra0rZ176gNMlTGmts9z8DNiFUbG0td212KvOvncWE/Jvtk/MORrd9hERVerWy1vYvMzKpu6n1XEqGoRjOF4ytcTDP2EfBG5QQuO2JdpfxB2mexjUY/Z0U8NczYQR/SzML7nBPga85jR2GS4LirvWnFGWmfeex5HJZTE0q7EPQwWpje/LDBVD++fjp8vn95/JJ/uy8P30/ZS549ns9V0/VlWZVVVU11bWsXHESY53ntaYUBrlONmJg5IhIzAhDzdYoprT4hIiViZkBIKW2VfwK00PRS+p9+MwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;CI tool comparison&quot;
-        title=&quot;Google searches for popular CI
-tools&quot;
-        src=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png&quot;
-        srcset=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/5039d/interest-graph.png 250w,
-/static/951c09807ba3a8aa3b5b3de5674d2a72/d19c0/interest-graph.png 500w,
-/static/951c09807ba3a8aa3b5b3de5674d2a72/993a7/interest-graph.png 788w&quot;
+        title=&quot;_Google searches for popular CI
+tools_&quot;
+        src=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/ea7fb/interest-graph.png&quot;
+        srcset=&quot;/static/951c09807ba3a8aa3b5b3de5674d2a72/63868/interest-graph.png 250w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/0b533/interest-graph.png 500w,
+/static/951c09807ba3a8aa3b5b3de5674d2a72/ea7fb/interest-graph.png 788w&quot;
         sizes=&quot;(max-width: 788px) 100vw, 788px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Google searches for popular CI
-tools&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Google searches for popular CI
+tools&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;The graph above paints a pretty accurate picture of this space. A few years
 ago, everyone (including us) was using Jenkins. There has been some effort to
@@ -385,8 +424,8 @@ agents&lt;/a&gt;.&lt;/p&gt;
 &lt;code class=&quot;language-text&quot;&gt;windows&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;libcurl&lt;/code&gt;. While being just text, they can be extremely powerful.
 The server will only give a job to an agent if that agent also has those tags.
 Here’s an animation to demonstrate.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/7981666968d52e0e6feeeb6e9d444e15/delegation.gif&quot; alt=&quot;Delegation animation&quot; title=&quot;A master/worker CI system with two
-        different types of workers&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/7981666968d52e0e6feeeb6e9d444e15/delegation.gif&quot; alt=&quot;Delegation animation&quot; title=&quot;_A master/worker CI system with two
+different types of workers_&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The white block in the lower right is the server node. The blue and purple
 blocks are agents with two different tags.&lt;/p&gt;
 &lt;p&gt;During a recent refactor of our CI system, I took the opportunity to redefine
@@ -424,31 +463,32 @@ types build off.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.97732104890149%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABh0lEQVQoz31Sy0rDQBTNSlSobZrMTCaTl236iA1N0oiEkIK2ixYxi4KCLv0EV/0DV3YpuHInbt0IXbnxU/Ij3kzaElrpYRjmcc495yYjKLvAWLfblutRQpS9EBRK+VDzWaEKwYphXb593/xkejzGdTG/AuQEdbXeiIksoVoFBkEy1wMI8y6c67v+INQ0jXB/XD1BtRMsVtccLtZ7/uj1K3l+J2YDSdIqeF1sW+Z4dOU4DsaYYOQ9Pk0/fu3prSzWNnqB2p1gvgjni07fbzWbKmPgDF52qxUEgWmaeRKE7PQhevnspfdNywSxjBDvGcny8aGJ5TiKut2uqqqQk1LKGCsWqyzVinR0EIeDNE3Pw9C2bWAKYMI0nRsqRXsgkDggMF0DCEzTThsNMHDOHJjhQCjYrATY+r4fRRHU3jqHcghBVEiNwEkof3q4hlOItFwusyybTCaiKEKJMmED3vMOoORwOJzNZsAge9/Jtrgwd103SRLP8wzD2KP/Xwy/N45jy7Jo6Uns4g/LZ12CpV4+pgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 62%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVQoz4VSy07bQBT1vkJxYt+5c+fB4AlVY2OHkgkoKKpEVbJJG4UFK6QuKrEIC1ZIfAQfEQn6HVUFf5ElOz4DeRKMGwl6ludx5z4m4CWIE/EKjG0ffNkZn0qTcMRXvu7xCEoKaxoiCnl48/v7w5M5PoFmSEIsZURcywcIMZHnAOglD1wkXbffd9ZaxljJxREpxaMW1fKBTIvj27/f7u75pxyi1rI2In5s26Ojr1mWISKLo93z6+mfx/TnZRQ2OK2eC1Cq9uQsP7vY7R9kaaqUQj/nVmLzPDfGlLUY071B9uuqO/pR5DtaawDwMyNiK9Qs7u3ttdvbgsrZpJRaa6xvK45g44P73B2Px4PBIMsypVSAnEuthVLMW4UQRBSGYaPRAADxAqmU1JtSa2NMkiTWWillsKxbylJW1ul0OpvN0jTlnFc8+abKFXj4tnn9kKWstZ7P54vFYjKZNJtNsTrVylBhPbwEAHQ6neFwyP+H9TARAUBRFKPRyDlnjPlnbe+H/e9k1lrnXHW2t8LP9gVdgfS2ZUIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Separation of concern&quot;
-        title=&quot;Separation of concern for Docker-based
-worker agents&quot;
-        src=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/e11df/heirarchy.png&quot;
-        srcset=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/5039d/heirarchy.png 250w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/d19c0/heirarchy.png 500w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/e11df/heirarchy.png 1000w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/8e846/heirarchy.png 1500w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/d40c8/heirarchy.png 2000w,
-/static/84c9d6dbb258d44e5e675bf6b4faed58/f5882/heirarchy.png 2822w&quot;
+        title=&quot;_Separation of concern for Docker-based
+worker agents_&quot;
+        src=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/00d43/heirarchy.png&quot;
+        srcset=&quot;/static/84c9d6dbb258d44e5e675bf6b4faed58/63868/heirarchy.png 250w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/0b533/heirarchy.png 500w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/00d43/heirarchy.png 1000w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/aa440/heirarchy.png 1500w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/e8950/heirarchy.png 2000w,
+/static/84c9d6dbb258d44e5e675bf6b4faed58/d3bd3/heirarchy.png 2822w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Separation of concern for Docker-based
-worker agents&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Separation of concern for Docker-based
+worker agents&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;P.S.&lt;/h2&gt;
 &lt;p&gt;GoCD also has a concept of ‘environments’, which function similarly to
@@ -480,29 +520,30 @@ for the default option, even when there are alternatives.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABEUlEQVQoz2MQNzEhD4kZGTHgkRY1NBY1MCJZs5gxiJS1s1RwthU3NgaqI1qzqYm4sYlhtJtjebj/xBzTzEgpaysxY2MiNJuCXKsf7mhX4O9SG+PVmeHUnG+YHiuipy9hakrYZqAi82R3y0w/z/Y0+6pkh8Yig7R4Ym0WMzLW9Ld3qor26c+zqcx06anVjosWNTAQJ8ZmoIclzUy8uzO8+4s8JtY5tlXJ2NuDwoygZqCbgQhouYKjjXaoj3ZEoJyDLVCdpJmZBEFnixobiRoZihgb8+vqC+joCmjrCurpixgaCRkYiKJ6G12zqJGRqp29vpunsZujg7+PsbuHqYezjZ+HqZ+nbUCgmr29KFKEAzUDADWMf2k/tzznAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.400000000000006%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABI0lEQVQoz2MQNzHBjkxNJEDIFJcCMSMjBlw6xYxNRA2NRPQNxY2NxU1J0SxmZCxpYabkZqvm6yxpbiZqaISpH6dmCTNT0yQPl+rIoGn5FvmxMvY2Ykbo+rFpNgVZaxTjbJfv71Ib49GW7tiUb5QeJ6Knj+Z/7DaDrE10s8zy9+7KsKtIdmgu1kuOFTM2JsLZYJvVfezdGuJ9+vLsanJce+s1o8JEDQyIshlkuamJZ3uaZ2+hx6R62/oSKWsrMSMibJYA6xQ3MpaxsVT1dVP185S2shQ3NpIwMyOsWcTISMTQQNjImF9XX0BXj19HX0DPQMjAUEBPT9TICKdmCbBObSdnEy8/a28Xn/Bgax9fO183t1Bf27AAj6goTSdHESMjCSTNAN2SgCJFThPzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Elegant desktop&quot;
-        title=&quot;Desktops can be both functional and
-elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&quot;
-        src=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/e11df/elegant.png&quot;
-        srcset=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/5039d/elegant.png 250w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/d19c0/elegant.png 500w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/e11df/elegant.png 1000w,
-/static/d5e6b27c6ec9ee29b871ba85f65e3063/3b243/elegant.png 1024w&quot;
+        title=&quot;_Desktops can be both functional and
+elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)_&quot;
+        src=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/00d43/elegant.png&quot;
+        srcset=&quot;/static/d5e6b27c6ec9ee29b871ba85f65e3063/63868/elegant.png 250w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/0b533/elegant.png 500w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/00d43/elegant.png 1000w,
+/static/d5e6b27c6ec9ee29b871ba85f65e3063/2bef9/elegant.png 1024w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Desktops can be both functional and
-elegant Credit to [/u/robowarrior_](https://reddit.com/user/robowarrior_/)&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Desktops can be both functional and
+elegant Credit to &lt;a href=&quot;https://reddit.com/user/robowarrior_/&quot;&gt;/u/robowarrior_&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Let me digress a bit, and explain what I mean by “Desktop environment”. The
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Desktop_environment&quot;&gt;Wikipedia article&lt;/a&gt; talks
@@ -512,15 +553,29 @@ read too closely or you’ll find
 &lt;p&gt;To me, a good DE is defined by &lt;strong&gt;workflows&lt;/strong&gt; rather than specific elements.&lt;/p&gt;
 &lt;p&gt;It should have the following.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The ability to launch apps with minimal friction&lt;/li&gt;
-&lt;li&gt;Window management that doesn’t get overwhelming as I open an increasing
-number of apps&lt;/li&gt;
-&lt;li&gt;An area to represent background apps which don’t always have their own window&lt;/li&gt;
-&lt;li&gt;A way to group windows into separate workspaces&lt;/li&gt;
-&lt;li&gt;A notification system which gets my attention without being irritating&lt;/li&gt;
-&lt;li&gt;Controls and feedback for volume, brightness etc.&lt;/li&gt;
-&lt;li&gt;The ability to tuck itself away, giving complete focus to the app I’m working
-on&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to launch apps with minimal friction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Window management that doesn’t get overwhelming as I open an increasing
+number of apps&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An area to represent background apps which don’t always have their own window&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A way to group windows into separate workspaces&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A notification system which gets my attention without being irritating&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Controls and feedback for volume, brightness etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to tuck itself away, giving complete focus to the app I’m working
+on&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Personally, I have tried a fair number Linux desktop environments over the
 years, including &lt;a href=&quot;https://www.kde.org/&quot;&gt;KDE&lt;/a&gt;,
@@ -538,26 +593,27 @@ mention some thoughts on three that stood out to me.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 819px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 819px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 79.60927960927961%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAADXklEQVQoz12S609cRRjGz59gWz/4rSZNGqI2aSqWauqtibXrGtOoFU0w9oMm/dKYxkQTJdpggba0UpUUFKpiuiCWxa2wVFhgWS5btiC7y4Hi7nJRYNnLOWfOXM/MOQsbh9ZWY/LLk3ln5nnnfWdGKXFVPPbyO9tKXQ88fuQ+2ySlR7Y/4dqx/6UHy9xbHHDvKHPvPHRs1+E3d7sqHjp4dHuZW6n7eTAcT/RPzQdjqWAsOaouDseSwXgyNLMgCUwneidvB6LJvunkQHQr7J9OPPtJy8MnLpWcbFD84bjDCKO04NiOECZEtuCbBbtgC6ncsgghFueCc9Pieb4h516pvrrzxKVH3m9QOoOTGJoAYmaxpYxx1htfy0PB2Q89U/FUuuCITDabyWQ2i8VRzzeXm+uLBe6uadt1smHPB01KW994dj2dXs9qmr6e08ZiqZymQ2T6ByNzyT8Zo/OJ5NLyMmRsYTw039cFCTla17H7VOPej1qU9kAY6HnNMHTDwBgDXUMYE0qpkM0wOQB6DsglQrFToBublNBX670lH17ZV9mqdI1Mc0ZMhAhl0ovyKYJ0xFgmPIbWlgCEA+pKdOkPhBD+axWoc8yyXvvS9+jHraWfXVW8w1Py5Fw+TxhHxsqq2kG0xSwhzZ5Tesqr6U6lp/GnkWpMxEKnd6L2HOP8WEP3nk89ZZ+3K76xqCMsWZWsEJrGymIUgDxEJLGayGnZbM5Q1Ynb8zEdoEw6vbywyIUob+rdW9XxZO01pXtCLW44CBNMCLUsJgrMEjKX4LbcZ8hMmpnXADAhtQTlQj7qWy39+2q8B+t+keZZ+Z4mwsK2VVWtOl0p1badK72To7NrG46NKaPMksjkEhlUfD+w/7zvmfpupSdy14yE7cTi8fLyN0KhkG0XrvuHhsKq49hoqyN2H3ny2z8OH/jC//zXN5SeW3PSfKdsKtPLAbO4/Ge6AUwA8H9s98zsuGf0qa/6Dl0OKL6bM5wz3YTGPyCpsguACJAK/w+E6Hh7+OnGwRe+HVL8EbVoW1jeL0IU/6sEwTuge9wNIUPmu9cizzWHXvxuRHmv6foZb+h053BV18gZ33j1rzdreiK1/ltnb0yd++338/3RukDswmD8wtDMxaB6MTgreb1t4nDruKs1/DdglO7YYTxURwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 79.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsTAAALEwEAmpwYAAADb0lEQVQoz02R609bdRzGzz/hC98sG1u8LFtQs5g5jdOywRajM84E2PZOosk0YbqLuzOjBg3ROevYdINsVTaYVMQNWJEiEGhpS2nB0pYOKYVeDpye3/13fuecchZzxkz85pMnz5vnefF9pOf2f7C9+vD6ito11jlq1lfUbqio3bCrpmz3gY2VBzdWHdq0x6as8sCWt+vK97//9Ft1Tzpqn9hZLd3wBGb+WQw/WJqaz0+n88ml5em0bWKZQmyhEEotjSczE3P54INcZL4QmcuNJRZ3nLpe9qHz2SNXpIFQTDDMGDV1wTnPykUhtJKpM8ZMQ3CNE0I457rQZISyVHBGHedbyw5f2lz/g3RvLIIhAJgKweMZpdH9twIJZdR5Zyw2XzANkcvlCrJsWZbncmPLtW90Q7x+4eZT9c1bjl2V3IPjhVw2m8uvKEpeXpmMzxUBUFV1YCQ4n8kSSmKJRHphAVKWDvkzgeFliCq/bHvm6I/ln7ZIvw+HEFABRABCSimCgDD79JLJNJ0ySpGKEaWMsVVLWBZAeM/XHZtPtj5/5qbUF5jmFAOEKNcIVpA8w4gKCE57ukkupRRhRyAZTIUxJiieKAYnAGV7mzq3nnVta/hF6vFFVWVFUVXKdaSkF6c7OMhmIWh1n8BL3rwsPmv/rifgJNRM3m6fuHwFa/ob3/5WfuHWi5+3S57QTMnUMaWEMQjVbCaJEEQIZ/KLShEU5JVkPJpKpQDCsrxcKMiY8Te//+OFL+681NgpDUSSVsnEhBJKKeeYcsY1yjjjQggBIFJUWFQBwoRxjWsCILKvuXfbV+6Xm7qkgcmkVTIgxoZZ8vt9H9d/lEjENaFf6hwdm8mtmgZhj+uI/TQOMHnnJ8/2pu5XL96VvJHZtbBumBPhcF3de9GpKca13vtDwcisYRj26Izb4UctAJN3W7w7Lva85uyTvNFZyzQwpZhQTeir1kMhdIgwJoQQTChfS/4X5hCT6htDrzg9juY/pf5wQte4au+MAcJrijBFmEIb8n8QIQqANT+P7rw6uPvaX9JgJPlQ5wQjihEj2FZsqw1Cj80jTxBiGAFVPXjL77g+XNU6Ih1ydh119R9x9X/S5j12e+h4x8iJX0dPun2nusZPdwfO3A2dvRc+1zt5vi/ScD/a4Jk654nua/NXuXx7Xb5/AaWJ8vpfWyHWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;*Slingshot launcher*&quot;
-        title=&quot;Slingshot launcher&quot;
-        src=&quot;/static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png&quot;
-        srcset=&quot;/static/2d082a8daaedfdde816cb8802f643284/5039d/slingshot.png 250w,
-/static/2d082a8daaedfdde816cb8802f643284/d19c0/slingshot.png 500w,
-/static/2d082a8daaedfdde816cb8802f643284/79d86/slingshot.png 819w&quot;
+        alt=&quot;Slingshot launcher&quot;
+        title=&quot;_Slingshot launcher_&quot;
+        src=&quot;/static/2d082a8daaedfdde816cb8802f643284/97655/slingshot.png&quot;
+        srcset=&quot;/static/2d082a8daaedfdde816cb8802f643284/63868/slingshot.png 250w,
+/static/2d082a8daaedfdde816cb8802f643284/0b533/slingshot.png 500w,
+/static/2d082a8daaedfdde816cb8802f643284/97655/slingshot.png 819w&quot;
         sizes=&quot;(max-width: 819px) 100vw, 819px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Slingshot launcher&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Slingshot launcher&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;It’s simple, fast, and fits my use case exactly. If I want to open Chrome, all
 I need to do is hit SuperchrEnter. No need to involve the mouse or remember the
@@ -571,27 +627,28 @@ thing.&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&quot;gatsby-resp-image-figure&quot; style=&quot;&quot;&gt;
     &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1000px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 14.829659318637276%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAkElEQVQI12MoDE9PcosIswgItwiIsAgIM/ONsQ2Jtg6KtAwMNfUNMPAINPQEIiAjyTmqKCgz2iYoyiYo2iY4xiaIYXnEjH6Llmg+zzgz73CzoHATf19tV39d9wBdDxDSQyCgoL+eewAQ6XsE6IMYDAuTGntsS3ylnZ29rFw9HaLjQ/yC3J3dbVw8bDGQHZoIADxPNEFS344sAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 14.799999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAlUlEQVQI12MoDE9PcosIswgItwiIsAgIM/ONsQ2Jtg6KtAwMNfUNMPAINPQMNPQMMPBIco4qCsqMtgmKsgmKtgmOsQliWB4xo9+iJZrPM87MO9wsKNzE31fb1V/XPUDXA4T0EMhf191fzz1Azz1A3yNAH8RgWJjU2GNb4ivt7Oxl5erpEB0f4hfk7uxu4+Jhi4Hs0EQAPE80QdFlHOoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Unity&quot;
-        title=&quot;Unity&quot;
-        src=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/e11df/unity.png&quot;
-        srcset=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/5039d/unity.png 250w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/d19c0/unity.png 500w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/e11df/unity.png 1000w,
-/static/2e44f4e1825fc2452d87b97bd00a5e42/10ebc/unity.png 1497w&quot;
+        title=&quot;_Unity_&quot;
+        src=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/00d43/unity.png&quot;
+        srcset=&quot;/static/2e44f4e1825fc2452d87b97bd00a5e42/63868/unity.png 250w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/0b533/unity.png 500w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/00d43/unity.png 1000w,
+/static/2e44f4e1825fc2452d87b97bd00a5e42/a80b8/unity.png 1497w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;
-    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;Unity&lt;/figcaption&gt;
+    &lt;figcaption class=&quot;gatsby-resp-image-figcaption&quot;&gt;&lt;p&gt;&lt;em&gt;Unity&lt;/em&gt;&lt;/p&gt;&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Some people don’t like that it also acts as a menu bar (File, Edit, etc.), but
 I think that it helps with keeping everything consistent. That said, there is
@@ -607,17 +664,21 @@ with, and it definitely has it’s place. Its basic philosophy guarantees an
 extremely efficient workflow, which I admire. Unfortunately, I found myself
 trying to force it to be a full desktop environment, which it was never meant
 to be. This included code in my i3 config like the following:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;bindsym XF86MonBrightnessUp &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xbacklight -inc 5; \
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;bindsym XF86MonBrightnessUp &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xbacklight -inc 5; \
     killall notify-osd; \
     notify-send &apos;Backlight&apos; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;xbacklight&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
 bindsym XF86MonBrightnessDown &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;xbacklight -dec 5; \
     killall notify-osd; \
-    notify-send &apos;Backlight&apos; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;xbacklight&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+    notify-send &apos;Backlight&apos; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;xbacklight&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This attempts to add brightness controls via the function keys on my laptop,
 and give feedback via a notification pop-up. What I learned:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Most implementations of notify-send suck. Especially Ubuntu’s&lt;/li&gt;
-&lt;li&gt;i3wm is not a full desktop environment, no matter how badly you want it to be&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most implementations of notify-send suck. Especially Ubuntu’s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i3wm is not a full desktop environment, no matter how badly you want it to be&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Some days, I feel kind of bad for not using something like i3wm. My inner
 hacker tries to convince me that I’m a sellout, but honestly, I firmly believe
@@ -631,8 +692,8 @@ a fresh install. First, I set up a combination of the
 &lt;a href=&quot;https://numixproject.org/&quot;&gt;Numix&lt;/a&gt; theme and the
 &lt;a href=&quot;https://snwh.org/paper&quot;&gt;Paper&lt;/a&gt; icon set. Then, I disable ‘scopes’ that I don’t
 care about like so:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;dconf &lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt; /com/canonical/unity/dash/scopes &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&quot;[&apos;home.scope&apos;, &apos;applications.scope&apos;, &apos;files.scope&apos;]&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;dconf &lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt; /com/canonical/unity/dash/scopes &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;[&apos;home.scope&apos;, &apos;applications.scope&apos;, &apos;files.scope&apos;]&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This reduces clutter in the app launcher and allows me to use key combinations
 like Super+c to open Chrome (instead of the ‘Photos’ scope).&lt;/p&gt;
 &lt;h2&gt;Final thoughts&lt;/h2&gt;
@@ -663,9 +724,13 @@ don’t — at least I will.&lt;/p&gt;
 &lt;p&gt;I don’t have a particular plan for what I’ll be writing, but it will likely
 involve&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Programming environments&lt;/strong&gt; — Mostly Vim, but also general workflows inside
-a terminal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tooling around programming for the cloud&lt;/strong&gt; — Specifically CI/CD, Docker and
-Google Cloud Platform&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Programming environments&lt;/strong&gt; — Mostly Vim, but also general workflows inside
+a terminal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tooling around programming for the cloud&lt;/strong&gt; — Specifically CI/CD, Docker and
+Google Cloud Platform&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There will be code snippets. There will be diagrams. There will be opinions.&lt;/p&gt;</content:encoded></item></channel></rss>
